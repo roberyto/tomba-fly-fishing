@@ -1,12 +1,12 @@
 {
-  "fecha": "21 de marzo de 2026",
-  "hora": "10:59",
+  "fecha": "21 de March de 2026",
+  "hora": "12:02",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
       "river": "Río Ter",
       "embalse_name": "Susqueda",
-      "aca_sensor": "EA060",
+      "saih_id": "A097",
       "embalse_id": "1231",
       "umbral_ok": 8,
       "umbral_warn": 20,
@@ -15,36 +15,36 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 16,
       "conca": "Ter",
-      "caudal": null,
+      "caudal": 25.0,
       "embalseNivel": 91.0,
-      "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles · Susqueda al 91.0%"
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 91.0%"
     },
     {
       "name": "Alfarràs",
       "river": "Río Noguera Ribagorzana",
       "embalse_name": "Canelles",
-      "aca_sensor": null,
-      "embalse_id": "1090",
+      "saih_id": "A137",
+      "embalse_id": "1049",
       "umbral_ok": 12,
       "umbral_warn": 25,
       "lat": 41.723,
       "lon": 0.558,
       "link": "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
       "plazas": 40,
-      "conca": "Noguera Ribagorçana",
-      "caudal": null,
-      "embalseNivel": 85.9,
-      "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles · Canelles al 85.9%"
+      "conca": "Noguera Ribagorzana",
+      "caudal": 11.6,
+      "embalseNivel": null,
+      "status": "green",
+      "badge": "Pescable",
+      "nota": "Condicions òptimes · 11.6 m³/s"
     },
     {
       "name": "Pedret",
       "river": "Río Llobregat",
       "embalse_name": "La Baells",
-      "aca_sensor": "EA034",
+      "saih_id": null,
       "embalse_id": "1186",
       "umbral_ok": 6,
       "umbral_warn": 15,
@@ -57,14 +57,14 @@
       "embalseNivel": 73.4,
       "status": "yellow",
       "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles · La Baells al 73.4%"
+      "nota": "Sense dades de cabal — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/"
     },
     {
       "name": "Oliana",
       "river": "Río Segre",
       "embalse_name": "Oliana",
-      "aca_sensor": null,
-      "embalse_id": "316",
+      "saih_id": "A023",
+      "embalse_id": "1095",
       "umbral_ok": 10,
       "umbral_warn": 22,
       "lat": 42.072,
@@ -72,17 +72,17 @@
       "link": "https://www.saihebro.com",
       "plazas": 25,
       "conca": "Segre",
-      "caudal": null,
-      "embalseNivel": 66.7,
+      "caudal": 18.1,
+      "embalseNivel": null,
       "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles · Oliana al 66.7%"
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució"
     },
     {
       "name": "Ponts",
       "river": "Río Segre",
       "embalse_name": "Rialb",
-      "aca_sensor": null,
+      "saih_id": "A023",
       "embalse_id": "1228",
       "umbral_ok": 10,
       "umbral_warn": 22,
@@ -91,17 +91,17 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": null,
+      "caudal": 18.1,
       "embalseNivel": 100.0,
       "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles · Rialb al 100.0%"
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 100.0%"
     },
     {
       "name": "Alòs de Balaguer",
       "river": "Río Segre",
       "embalse_name": "Rialb",
-      "aca_sensor": null,
+      "saih_id": "A023",
       "embalse_id": "1228",
       "umbral_ok": 10,
       "umbral_warn": 22,
@@ -110,18 +110,18 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": null,
+      "caudal": 18.1,
       "embalseNivel": 100.0,
       "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles · Rialb al 100.0%"
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 100.0%"
     },
     {
       "name": "Malagarriga",
       "river": "Río Cardener",
       "embalse_name": "Sant Ponç",
-      "aca_sensor": "EA026",
-      "embalse_id": "311",
+      "saih_id": null,
+      "embalse_id": "1199",
       "umbral_ok": 5,
       "umbral_warn": 10,
       "lat": 41.838,
@@ -133,13 +133,13 @@
       "embalseNivel": null,
       "status": "yellow",
       "badge": "Sin datos — consultar",
-      "nota": "Sin datos de caudal disponibles"
+      "nota": "Sense dades de cabal — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/"
     },
     {
       "name": "La Torrassa",
       "river": "Lago intensivo",
       "embalse_name": "La Torrassa",
-      "aca_sensor": null,
+      "saih_id": null,
       "embalse_id": null,
       "umbral_ok": 999,
       "umbral_warn": 999,
@@ -152,7 +152,7 @@
       "embalseNivel": null,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Lago artificial — sin dependencia de caudal"
+      "nota": "Llac artificial — sense dependència de cabal"
     }
   ]
 }
