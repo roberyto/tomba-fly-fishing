@@ -639,9 +639,9 @@
       </button>
     </div>
     <div class="header-meta">
-      <span id="lastUpdate">Datos: 19 marzo 2026</span>
+      <span id="lastUpdate">Actualizado: 21 de March de 2026 10:01</span>
       <div class="meta-dot"></div>
-      <span class="trend-badge">▼ Embalses bajando</span>
+      <span class="trend-badge">✅ 1 coto pescable</span>
       <div class="meta-dot"></div>
       <button class="help-btn" onclick="openModal()">¿Cómo actualizar?</button>
     </div>
@@ -763,59 +763,59 @@ const PERMISO_URL = "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_pub
 const COTOS = [
   {
     name: "Anglès – El Pasteral", river: "Río Ter", embalse: "Susqueda",
-    caudal: 75, embalseNivel: 97.9, status: "red", badge: "No pescable",
-    nota: "Susqueda al 97.9% — desembalse activo 250 m³/s",
+    caudal: null, embalseNivel: 91.0, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 16, conca: "Ter", lat: 41.950, lon: 2.633
+    plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633
   },
   {
-    name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles / Santa Ana",
-    caudal: 28, embalseNivel: 88, status: "red", badge: "No pescable",
-    nota: "Canelles liberando agua — primera vez en 40 años",
+    name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
+    caudal: null, embalseNivel: null, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
     link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
     plazas: 40, conca: "Noguera Ribagorçana", lat: 41.723, lon: 0.558
   },
   {
     name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
-    caudal: 18, embalseNivel: 91, status: "red", badge: "No pescable",
-    nota: "La Baells al 91% — desembalses preventivos activos",
+    caudal: null, embalseNivel: 73.4, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848
   },
   {
     name: "Oliana", river: "Río Segre", embalse: "Oliana",
-    caudal: 45, embalseNivel: 85, status: "red", badge: "No pescable",
-    nota: "Segre x4 su caudal habitual tras las lluvias",
+    caudal: null, embalseNivel: null, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com",
     link: "https://www.saihebro.com",
     plazas: 25, conca: "Segre", lat: 42.072, lon: 1.319
   },
   {
     name: "Ponts", river: "Río Segre", embalse: "Rialb",
-    caudal: 40, embalseNivel: 82, status: "red", badge: "No pescable",
-    nota: "Misma cuenca que Oliana — río igualmente alto",
+    caudal: null, embalseNivel: 100.0, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com",
     link: "https://www.saihebro.com",
     plazas: 20, conca: "Segre", lat: 41.916, lon: 1.196
   },
   {
     name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
-    caudal: 38, embalseNivel: 82, status: "red", badge: "No pescable",
-    nota: "Coto sin muerte. Misma cuenca que Ponts",
+    caudal: null, embalseNivel: 100.0, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com",
     link: "https://www.saihebro.com",
-    plazas: 20, conca: "Segre", lat: 41.883, lon: 0.900
+    plazas: 20, conca: "Segre", lat: 41.883, lon: 0.9
   },
   {
     name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
-    caudal: 8, embalseNivel: 89, status: "yellow", badge: "Condiciones límite",
-    nota: "Cardener más controlado — consultar antes de salir",
+    caudal: null, embalseNivel: null, status: "yellow", badge: "Sin datos — consultar",
+    nota: "Sin datos de caudal disponibles — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.740
+    plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74
   },
   {
     name: "La Torrassa", river: "Lago intensivo", embalse: "La Torrassa",
-    caudal: null, embalseNivel: 87, status: "green", badge: "Pescable",
-    nota: "Lago artificial — única opción viable esta semana",
+    caudal: null, embalseNivel: null, status: "green", badge: "Pescable",
+    nota: "Lago artificial — sin dependencia de caudal",
     link: "https://www.embalses.net",
-    plazas: 50, conca: "Noguera Pallaresa", lat: 42.200, lon: 1.050
+    plazas: 50, conca: "Noguera Pallaresa", lat: 42.2, lon: 1.05
   }
 ];
 
