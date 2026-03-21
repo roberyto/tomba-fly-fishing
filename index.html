@@ -639,7 +639,7 @@
       </button>
     </div>
     <div class="header-meta">
-      <span id="lastUpdate">Actualizado: 21 de March de 2026 10:28</span>
+      <span id="lastUpdate">Actualizado: 21 de marzo de 2026 10:59</span>
       <div class="meta-dot"></div>
       <span class="trend-badge">✅ 1 coto pescable</span>
       <div class="meta-dot"></div>
@@ -761,62 +761,14 @@
 const PERMISO_URL = "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale";
 
 const COTOS = [
-  {
-    name: "Anglès – El Pasteral", river: "Río Ter", embalse: "Susqueda",
-    caudal: null, embalseNivel: 91.0, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633
-  },
-  {
-    name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
-    caudal: null, embalseNivel: null, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
-    link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
-    plazas: 40, conca: "Noguera Ribagorçana", lat: 41.723, lon: 0.558
-  },
-  {
-    name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
-    caudal: null, embalseNivel: 73.4, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848
-  },
-  {
-    name: "Oliana", river: "Río Segre", embalse: "Oliana",
-    caudal: null, embalseNivel: null, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com",
-    link: "https://www.saihebro.com",
-    plazas: 25, conca: "Segre", lat: 42.072, lon: 1.319
-  },
-  {
-    name: "Ponts", river: "Río Segre", embalse: "Rialb",
-    caudal: null, embalseNivel: 100.0, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com",
-    link: "https://www.saihebro.com",
-    plazas: 20, conca: "Segre", lat: 41.916, lon: 1.196
-  },
-  {
-    name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
-    caudal: null, embalseNivel: 100.0, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://www.saihebro.com",
-    link: "https://www.saihebro.com",
-    plazas: 20, conca: "Segre", lat: 41.883, lon: 0.9
-  },
-  {
-    name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
-    caudal: null, embalseNivel: null, status: "yellow", badge: "Sin datos — consultar",
-    nota: "Sin datos de caudal disponibles — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74
-  },
-  {
-    name: "La Torrassa", river: "Lago intensivo", embalse: "La Torrassa",
-    caudal: null, embalseNivel: null, status: "green", badge: "Pescable",
-    nota: "Lago artificial — sin dependencia de caudal",
-    link: "https://www.embalses.net",
-    plazas: 50, conca: "Noguera Pallaresa", lat: 42.2, lon: 1.05
-  }
+  {name:"Anglès – El Pasteral",river:"Río Ter",embalse:"Susqueda",caudal:null,embalseNivel:91.0,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles · Susqueda al 91.0%",link:"https://aplicacions.aca.gencat.cat/aetr/vishid/",plazas:16,conca:"Ter",lat:41.95,lon:2.633},
+  {name:"Alfarràs",river:"Río Noguera Ribagorzana",embalse:"Canelles",caudal:null,embalseNivel:85.9,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles · Canelles al 85.9%",link:"https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",plazas:40,conca:"Noguera Ribagorçana",lat:41.723,lon:0.558},
+  {name:"Pedret",river:"Río Llobregat",embalse:"La Baells",caudal:null,embalseNivel:73.4,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles · La Baells al 73.4%",link:"https://aplicacions.aca.gencat.cat/aetr/vishid/",plazas:30,conca:"Llobregat",lat:42.098,lon:1.848},
+  {name:"Oliana",river:"Río Segre",embalse:"Oliana",caudal:null,embalseNivel:66.7,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles · Oliana al 66.7%",link:"https://www.saihebro.com",plazas:25,conca:"Segre",lat:42.072,lon:1.319},
+  {name:"Ponts",river:"Río Segre",embalse:"Rialb",caudal:null,embalseNivel:100.0,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles · Rialb al 100.0%",link:"https://www.saihebro.com",plazas:20,conca:"Segre",lat:41.916,lon:1.196},
+  {name:"Alòs de Balaguer",river:"Río Segre",embalse:"Rialb",caudal:null,embalseNivel:100.0,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles · Rialb al 100.0%",link:"https://www.saihebro.com",plazas:20,conca:"Segre",lat:41.883,lon:0.9},
+  {name:"Malagarriga",river:"Río Cardener",embalse:"Sant Ponç",caudal:null,embalseNivel:null,status:"yellow",badge:"Sin datos — consultar",nota:"Sin datos de caudal disponibles",link:"https://aplicacions.aca.gencat.cat/aetr/vishid/",plazas:25,conca:"Llobregat",lat:41.838,lon:1.74},
+  {name:"La Torrassa",river:"Lago intensivo",embalse:"La Torrassa",caudal:null,embalseNivel:null,status:"green",badge:"Pescable",nota:"Lago artificial — sin dependencia de caudal",link:"https://www.embalses.net",plazas:50,conca:"Noguera Pallaresa",lat:42.2,lon:1.05}
 ];
 
 const UMBRAL = { angles: 8, alfarras: 12, pedret: 6, segre: 10, cardener: 5 };
