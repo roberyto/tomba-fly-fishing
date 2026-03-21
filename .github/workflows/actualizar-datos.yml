@@ -12,21 +12,13 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Verificar archivos y versión del script
-        run: |
-          echo "=== Directorio: $(pwd) ==="
-          echo "=== Archivos: ==="
-          ls -la
-          echo "=== Primeras 15 líneas de update_data.py ==="
-          head -15 update_data.py
-          echo "=== Verificar que index.html existe ==="
-          test -f index.html && echo "✅ index.html encontrado" || echo "❌ index.html NO encontrado"
 
       - name: Ejecutar script
         run: python update_data.py
@@ -35,6 +27,9 @@ jobs:
         run: |
           git config user.name "Tomba Bot"
           git config user.email "bot@tombaflyfishing.com"
+          git fetch origin
+          git reset --hard origin/main
+          python update_data.py
           git add index.html datos.json
           git diff --staged --quiet || git commit -m "Datos actualizados - $(date '+%d/%m/%Y %H:%M')"
-          git push --forcepush
+          git push
