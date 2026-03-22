@@ -1,6 +1,6 @@
 {
   "fecha": "22 de March de 2026",
-  "hora": "10:38",
+  "hora": "10:42",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -53,11 +53,11 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 30,
       "conca": "Llobregat",
-      "caudal": null,
+      "caudal": 9.5,
       "embalseNivel": 78.8,
       "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sense dades de cabal — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/"
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 9.5 m³/s — vadejar amb precaució · La Baells al 78.8%"
     },
     {
       "name": "Oliana",
@@ -129,11 +129,11 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 25,
       "conca": "Llobregat",
-      "caudal": null,
+      "caudal": 6.5,
       "embalseNivel": 92.3,
       "status": "yellow",
-      "badge": "Sin datos — consultar",
-      "nota": "Sense dades de cabal — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/"
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 6.5 m³/s — vadejar amb precaució · Sant Ponç al 92.3%"
     },
     {
       "name": "La Torrassa",
