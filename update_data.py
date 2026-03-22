@@ -71,7 +71,7 @@ COTOS = [
     {
         "name": "Malagarriga",
         "river": "Río Cardener", "embalse_name": "Sant Ponç",
-        "saih_id": None, "embalse_id": "311",       # CORREGIT: era 1199
+        "saih_id": None, "embalse_id": "1229",      # Sant Ponc corregit
         "umbral_ok": 5, "umbral_warn": 10,
         "lat": 41.838, "lon": 1.740,
         "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
@@ -112,25 +112,16 @@ def get_caudals_gist():
         return {}
 
 def get_embalse_nivel(embalse_id):
-    """
-    Scraping millorat: busca el % dins del context específic de la pàgina
-    d'embalses.net, evitant capturar % d'altres elements (barres de progrés, etc.)
-    """
+    """Consulta nivel de embalse en embalses.net."""
     url = f"https://www.embalses.net/pantano-{embalse_id}-.html"
     html = fetch_url(url)
     if not html:
         return None
-
-    # Patrons específics per embalses.net — en ordre de fiabilitat
     patterns = [
-        # "Capacidad actual: 123,4 hm³ (56,7%)"
-        r'[Cc]apacidad actual[^(]*\((\d+[.,]\d+)\s*%\)',
-        # "56,7% de su capacidad"
-        r'(\d+[.,]\d+)\s*%\s*de su capacidad',
-        # Taula amb el % destacat
-        r'class="[^"]*porcentaje[^"]*"[^>]*>(\d+[.,]\d+)',
-        # Fallback: primer % raonable a la pàgina (entre 10 i 105)
-        r'\b(\d{2,3}[.,]\d+)\s*%',
+        r"Porcentaje:\s*(\d+[.,]\d+)\s*%",           # Widget: "Porcentaje: 85,86 %"
+        r"Agua embalsada[^%]{0,80}(\d{2,3}[.,]\d+)\s*%",  # "Agua embalsada...: 85,86 %"
+        r">\s*(\d{2,3}[.,]\d{2})\s*%\s*<",           # Taula: ">85,71%<"
+        r"(\d{2,3}[.,]\d{1,2})\s*%",                 # Fallback
     ]
     for pat in patterns:
         m = re.search(pat, html, re.IGNORECASE)
@@ -142,6 +133,7 @@ def get_embalse_nivel(embalse_id):
             except:
                 pass
     return None
+
 
 def get_status(caudal, umbral_ok, umbral_warn, is_lake=False):
     if is_lake:
