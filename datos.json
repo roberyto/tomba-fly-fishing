@@ -1,6 +1,6 @@
 {
   "fecha": "22 de March de 2026",
-  "hora": "09:36",
+  "hora": "09:49",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -16,10 +16,10 @@
       "plazas": 16,
       "conca": "Ter",
       "caudal": 25.0,
-      "embalseNivel": 91.0,
+      "embalseNivel": 88.9,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 91.0%"
+      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 88.9%"
     },
     {
       "name": "Alfarràs",
@@ -35,10 +35,10 @@
       "plazas": 40,
       "conca": "Noguera Ribagorzana",
       "caudal": 11.6,
-      "embalseNivel": 85.9,
+      "embalseNivel": 85.7,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 85.9%"
+      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 85.7%"
     },
     {
       "name": "Pedret",
@@ -54,7 +54,7 @@
       "plazas": 30,
       "conca": "Llobregat",
       "caudal": null,
-      "embalseNivel": 73.4,
+      "embalseNivel": 78.8,
       "status": "yellow",
       "badge": "Sin datos — consultar",
       "nota": "Sense dades de cabal — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/"
@@ -73,10 +73,10 @@
       "plazas": 25,
       "conca": "Segre",
       "caudal": 18.1,
-      "embalseNivel": 66.7,
+      "embalseNivel": 60.5,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 66.7%"
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 60.5%"
     },
     {
       "name": "Ponts",
@@ -121,7 +121,7 @@
       "river": "Río Cardener",
       "embalse_name": "Sant Ponç",
       "saih_id": null,
-      "embalse_id": "311",
+      "embalse_id": "1229",
       "umbral_ok": 5,
       "umbral_warn": 10,
       "lat": 41.838,
@@ -130,7 +130,7 @@
       "plazas": 25,
       "conca": "Llobregat",
       "caudal": null,
-      "embalseNivel": null,
+      "embalseNivel": 92.3,
       "status": "yellow",
       "badge": "Sin datos — consultar",
       "nota": "Sense dades de cabal — consulta https://aplicacions.aca.gencat.cat/aetr/vishid/"
