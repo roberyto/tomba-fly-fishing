@@ -177,7 +177,7 @@ def main():
         is_lake = coto["umbral_ok"] == 999
 
         caudal = None
-        if not is_lake and coto["saih_id"]:
+        if not is_lake:
             dades = caudals_gist.get(coto["name"], {})
             caudal = dades.get("caudal")
             print(f"     Cabal: {caudal} m³/s")
