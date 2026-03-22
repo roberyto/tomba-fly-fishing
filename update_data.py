@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Tomba Fly Fishing — Auto-updater
-Llegeix caudals del GitHub Gist (actualitzat des de casa cada hora)
-i embalses de embalses.net, i actualitza l'HTML.
+Tomba Fly Fishing — Auto-updater v2
+Llegeix caudals del GitHub Gist i embalses de embalses.net
 """
 
 import json
@@ -11,7 +10,6 @@ import sys
 import urllib.request
 from datetime import datetime
 
-# ── Configuració ────────────────────────────────────────────────────────────
 GIST_ID   = "69e1edfe77f4f03d07789ad74500061b"
 GIST_FILE = "caudales.json"
 
@@ -19,8 +17,7 @@ COTOS = [
     {
         "name": "Anglès – El Pasteral",
         "river": "Río Ter", "embalse_name": "Susqueda",
-        "saih_id": "A097",
-        "embalse_id": "1231",
+        "saih_id": "A097", "embalse_id": "1231",
         "umbral_ok": 8, "umbral_warn": 20,
         "lat": 41.950, "lon": 2.633,
         "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
@@ -29,8 +26,7 @@ COTOS = [
     {
         "name": "Alfarràs",
         "river": "Río Noguera Ribagorzana", "embalse_name": "Canelles",
-        "saih_id": "A137",
-        "embalse_id": "1049",
+        "saih_id": "A137", "embalse_id": "1090",   # CORREGIT: era 1049
         "umbral_ok": 12, "umbral_warn": 25,
         "lat": 41.723, "lon": 0.558,
         "link": "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
@@ -39,8 +35,7 @@ COTOS = [
     {
         "name": "Pedret",
         "river": "Río Llobregat", "embalse_name": "La Baells",
-        "saih_id": None,
-        "embalse_id": "1186",
+        "saih_id": None, "embalse_id": "1186",
         "umbral_ok": 6, "umbral_warn": 15,
         "lat": 42.098, "lon": 1.848,
         "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
@@ -49,8 +44,7 @@ COTOS = [
     {
         "name": "Oliana",
         "river": "Río Segre", "embalse_name": "Oliana",
-        "saih_id": "A023",
-        "embalse_id": "1095",
+        "saih_id": "A023", "embalse_id": "316",     # CORREGIT: era 1095
         "umbral_ok": 10, "umbral_warn": 22,
         "lat": 42.072, "lon": 1.319,
         "link": "https://www.saihebro.com",
@@ -59,8 +53,7 @@ COTOS = [
     {
         "name": "Ponts",
         "river": "Río Segre", "embalse_name": "Rialb",
-        "saih_id": "A023",
-        "embalse_id": "1228",
+        "saih_id": "A023", "embalse_id": "1228",
         "umbral_ok": 10, "umbral_warn": 22,
         "lat": 41.916, "lon": 1.196,
         "link": "https://www.saihebro.com",
@@ -69,8 +62,7 @@ COTOS = [
     {
         "name": "Alòs de Balaguer",
         "river": "Río Segre", "embalse_name": "Rialb",
-        "saih_id": "A023",
-        "embalse_id": "1228",
+        "saih_id": "A023", "embalse_id": "1228",
         "umbral_ok": 10, "umbral_warn": 22,
         "lat": 41.883, "lon": 0.900,
         "link": "https://www.saihebro.com",
@@ -79,8 +71,7 @@ COTOS = [
     {
         "name": "Malagarriga",
         "river": "Río Cardener", "embalse_name": "Sant Ponç",
-        "saih_id": None,
-        "embalse_id": "1199",
+        "saih_id": None, "embalse_id": "311",       # CORREGIT: era 1199
         "umbral_ok": 5, "umbral_warn": 10,
         "lat": 41.838, "lon": 1.740,
         "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
@@ -89,8 +80,7 @@ COTOS = [
     {
         "name": "La Torrassa",
         "river": "Lago intensivo", "embalse_name": "La Torrassa",
-        "saih_id": None,
-        "embalse_id": None,
+        "saih_id": None, "embalse_id": None,
         "umbral_ok": 999, "umbral_warn": 999,
         "lat": 42.200, "lon": 1.050,
         "link": "https://www.embalses.net",
@@ -104,35 +94,50 @@ def fetch_url(url, timeout=10):
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.read().decode("utf-8", errors="ignore")
     except Exception as e:
-        print(f"  ERROR descargando {url}: {e}", file=sys.stderr)
+        print(f"  ERROR {url}: {e}", file=sys.stderr)
         return None
 
 def get_caudals_gist():
     url = f"https://gist.githubusercontent.com/roberyto/{GIST_ID}/raw/{GIST_FILE}"
     text = fetch_url(url)
     if not text:
-        print("  WARNING: No se pudo leer el Gist — sin datos de caudal")
+        print("  WARNING: No s'ha pogut llegir el Gist")
         return {}
     try:
         data = json.loads(text)
-        cotos = data.get("cotos", {})
         print(f"  OK Gist llegit — actualitzat: {data.get('actualitzat', '?')}")
-        return cotos
+        return data.get("cotos", {})
     except Exception as e:
-        print(f"  ERROR parseant Gist: {e}")
+        print(f"  ERROR Gist: {e}")
         return {}
 
 def get_embalse_nivel(embalse_id):
+    """
+    Scraping millorat: busca el % dins del context específic de la pàgina
+    d'embalses.net, evitant capturar % d'altres elements (barres de progrés, etc.)
+    """
     url = f"https://www.embalses.net/pantano-{embalse_id}-.html"
     html = fetch_url(url)
     if not html:
         return None
-    for pat in [r'(\d+[.,]\d+)\s*%', r'Volumen[^:]*:\s*(\d+[.,]\d+)']:
-        m = re.search(pat, html)
+
+    # Patrons específics per embalses.net — en ordre de fiabilitat
+    patterns = [
+        # "Capacidad actual: 123,4 hm³ (56,7%)"
+        r'[Cc]apacidad actual[^(]*\((\d+[.,]\d+)\s*%\)',
+        # "56,7% de su capacidad"
+        r'(\d+[.,]\d+)\s*%\s*de su capacidad',
+        # Taula amb el % destacat
+        r'class="[^"]*porcentaje[^"]*"[^>]*>(\d+[.,]\d+)',
+        # Fallback: primer % raonable a la pàgina (entre 10 i 105)
+        r'\b(\d{2,3}[.,]\d+)\s*%',
+    ]
+    for pat in patterns:
+        m = re.search(pat, html, re.IGNORECASE)
         if m:
             try:
                 val = float(m.group(1).replace(",", "."))
-                if 0 < val <= 110:
+                if 0 < val <= 105:
                     return round(val, 1)
             except:
                 pass
@@ -190,10 +195,11 @@ def main():
             key = coto["embalse_id"]
             if key in visitats_embalse:
                 embalse_nivel = visitats_embalse[key]
+                print(f"     Embalse {key}: {embalse_nivel}% (reutilitzat)")
             else:
                 embalse_nivel = get_embalse_nivel(key)
                 visitats_embalse[key] = embalse_nivel
-            print(f"     Embalse: {embalse_nivel}%")
+                print(f"     Embalse {key}: {embalse_nivel}%")
 
         status, badge = get_status(caudal, coto["umbral_ok"], coto["umbral_warn"], is_lake)
         nota = get_nota(coto, caudal, embalse_nivel)
@@ -244,7 +250,8 @@ def update_html(cotos, fecha, hora):
     )
 
     pescables = sum(1 for c in cotos if c["status"] == "green")
-    trend = f"✅ {pescables} coto{'s' if pescables != 1 else ''} pescable{'s' if pescables != 1 else ''}" if pescables > 0 else "▼ Embassaments alts"
+    trend = (f"✅ {pescables} coto{'s' if pescables != 1 else ''} pescable{'s' if pescables != 1 else ''}"
+             if pescables > 0 else "▼ Embassaments alts")
     html = re.sub(r'class="trend-badge">[^<]*<', f'class="trend-badge">{trend}<', html)
 
     with open("index.html", "w", encoding="utf-8") as f:
