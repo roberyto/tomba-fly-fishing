@@ -1,6 +1,6 @@
 {
   "fecha": "22 de March de 2026",
-  "hora": "10:02",
+  "hora": "10:38",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -72,11 +72,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 25,
       "conca": "Segre",
-      "caudal": 18.8,
-      "embalseNivel": 60.5,
+      "caudal": 18.1,
+      "embalseNivel": 60.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.8 m³/s — vadejar amb precaució · Oliana al 60.5%"
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 60.6%"
     },
     {
       "name": "Ponts",
@@ -91,11 +91,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": 18.8,
+      "caudal": 18.1,
       "embalseNivel": 90.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.8 m³/s — vadejar amb precaució · Rialb al 90.6%"
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.6%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -110,11 +110,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": 18.8,
+      "caudal": 18.1,
       "embalseNivel": 90.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.8 m³/s — vadejar amb precaució · Rialb al 90.6%"
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.6%"
     },
     {
       "name": "Malagarriga",
