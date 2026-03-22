@@ -1,6 +1,6 @@
 {
   "fecha": "22 de March de 2026",
-  "hora": "09:49",
+  "hora": "09:58",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -34,11 +34,11 @@
       "link": "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
       "plazas": 40,
       "conca": "Noguera Ribagorzana",
-      "caudal": 11.6,
+      "caudal": 13.2,
       "embalseNivel": 85.7,
-      "status": "green",
-      "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 85.7%"
+      "status": "yellow",
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 13.2 m³/s — vadejar amb precaució · Canelles al 85.7%"
     },
     {
       "name": "Pedret",
@@ -72,18 +72,18 @@
       "link": "https://www.saihebro.com",
       "plazas": 25,
       "conca": "Segre",
-      "caudal": 18.1,
+      "caudal": 18.8,
       "embalseNivel": 60.5,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 60.5%"
+      "nota": "Cabal alt · 18.8 m³/s — vadejar amb precaució · Oliana al 60.5%"
     },
     {
       "name": "Ponts",
       "river": "Río Segre",
       "embalse_name": "Rialb",
       "saih_id": "A023",
-      "embalse_id": "1228",
+      "embalse_id": "1102",
       "umbral_ok": 10,
       "umbral_warn": 22,
       "lat": 41.916,
@@ -91,11 +91,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": 18.1,
-      "embalseNivel": 100.0,
+      "caudal": 18.8,
+      "embalseNivel": 90.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 100.0%"
+      "nota": "Cabal alt · 18.8 m³/s — vadejar amb precaució · Rialb al 90.6%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -110,11 +110,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": 18.1,
+      "caudal": 18.8,
       "embalseNivel": 100.0,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 100.0%"
+      "nota": "Cabal alt · 18.8 m³/s — vadejar amb precaució · Rialb al 100.0%"
     },
     {
       "name": "Malagarriga",
