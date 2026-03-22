@@ -62,7 +62,7 @@ COTOS = [
     {
         "name": "Alòs de Balaguer",
         "river": "Río Segre", "embalse_name": "Rialb",
-        "saih_id": "A023", "embalse_id": "1228",
+        "saih_id": "A023", "embalse_id": "1102",
         "umbral_ok": 10, "umbral_warn": 22,
         "lat": 41.883, "lon": 0.900,
         "link": "https://www.saihebro.com",
