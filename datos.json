@@ -1,6 +1,6 @@
 {
   "fecha": "22 de March de 2026",
-  "hora": "07:52",
+  "hora": "09:36",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -26,7 +26,7 @@
       "river": "Río Noguera Ribagorzana",
       "embalse_name": "Canelles",
       "saih_id": "A137",
-      "embalse_id": "1049",
+      "embalse_id": "1090",
       "umbral_ok": 12,
       "umbral_warn": 25,
       "lat": 41.723,
@@ -35,10 +35,10 @@
       "plazas": 40,
       "conca": "Noguera Ribagorzana",
       "caudal": 11.6,
-      "embalseNivel": null,
+      "embalseNivel": 85.9,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.6 m³/s"
+      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 85.9%"
     },
     {
       "name": "Pedret",
@@ -64,7 +64,7 @@
       "river": "Río Segre",
       "embalse_name": "Oliana",
       "saih_id": "A023",
-      "embalse_id": "1095",
+      "embalse_id": "316",
       "umbral_ok": 10,
       "umbral_warn": 22,
       "lat": 42.072,
@@ -73,10 +73,10 @@
       "plazas": 25,
       "conca": "Segre",
       "caudal": 18.1,
-      "embalseNivel": null,
+      "embalseNivel": 66.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució"
+      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 66.7%"
     },
     {
       "name": "Ponts",
@@ -121,7 +121,7 @@
       "river": "Río Cardener",
       "embalse_name": "Sant Ponç",
       "saih_id": null,
-      "embalse_id": "1199",
+      "embalse_id": "311",
       "umbral_ok": 5,
       "umbral_warn": 10,
       "lat": 41.838,
