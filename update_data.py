@@ -53,7 +53,7 @@ COTOS = [
     {
         "name": "Ponts",
         "river": "Río Segre", "embalse_name": "Rialb",
-        "saih_id": "A023", "embalse_id": "1228",
+        "saih_id": "A023", "embalse_id": "1102",
         "umbral_ok": 10, "umbral_warn": 22,
         "lat": 41.916, "lon": 1.196,
         "link": "https://www.saihebro.com",
