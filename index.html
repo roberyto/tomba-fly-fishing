@@ -1186,6 +1186,9 @@ async function loadWeatherAll() {
         ? finalStatus(c, w)
         : { status: c.status, badge: c.badge };
 
+      // Guardar status final en el array (para el mapa y el contador)
+      COTOS[i].statusFinal = fs.status;
+
       // Actualizar tarjeta visualmente
       const card = el.closest(".card");
       if (card && fs.status !== c.status) {
@@ -1227,10 +1230,20 @@ async function loadWeatherAll() {
   document.getElementById("sumGreen").textContent = g + o;
   document.getElementById("sumYellow").textContent = y;
   document.getElementById("sumRed").textContent = r;
-  // Cambiar label del resumen si hay óptimos
   if (o > 0) {
     document.getElementById("sumGreen").style.color = "var(--optimal)";
   }
+
+  // Actualizar trend badge del header con el estado final real
+  const totalPescables = g + o;
+  let trendText;
+  if (o > 0 && g === 0) trendText = `✨ ${o} coto${o!==1?'s':''} en condicions òptimes`;
+  else if (totalPescables > 0) trendText = `✅ ${totalPescables} coto${totalPescables!==1?'s':''} pescable${totalPescables!==1?'s':''}`;
+  else trendText = "▼ Embassaments alts";
+  document.querySelector(".trend-badge").textContent = trendText;
+
+  // Re-renderizar mapa con colores actualizados
+  renderMap();
 }
 
 // ── FASE LUNAR ───────────────────────────────────────────────────────────────
@@ -1290,8 +1303,8 @@ function renderMoon() {
     <span style="font-size:11px;font-weight:500;color:${moon.fishing.color}">${moon.fishing.label}</span>
   `;
 }
-const COLOR = { green: "#5adb8a", yellow: "#f0b942", red: "#f05a5a" };
-const GLOW  = { green: "rgba(90,219,138,0.4)", yellow: "rgba(240,185,66,0.4)", red: "rgba(240,90,90,0.4)" };
+const COLOR = { green: "#5adb8a", yellow: "#f0b942", red: "#f05a5a", optimal: "#a78bfa" };
+const GLOW  = { green: "rgba(90,219,138,0.4)", yellow: "rgba(240,185,66,0.4)", red: "rgba(240,90,90,0.4)", optimal: "rgba(167,139,250,0.4)" };
 
 function renderMap() {
   const svgEl = document.getElementById("mapaSvg");
@@ -1339,8 +1352,8 @@ function renderMap() {
 
       COTOS.forEach((c, i) => {
         const [px, py] = projection([c.lon, c.lat]);
-        const col = COLOR[c.status];
-        const glow = GLOW[c.status];
+        const col = COLOR[c.statusFinal || c.status];
+        const glow = GLOW[c.statusFinal || c.status];
         const g = svg.append("g").style("cursor","pointer");
 
         g.append("circle").attr("cx",px).attr("cy",py).attr("r",10).attr("fill",glow);
@@ -1363,7 +1376,8 @@ function renderMap() {
           .attr("fill",col).attr("opacity",0.9).text(shorts[i] || c.name.split(" ")[0]);
 
         const showTip = () => {
-          const label = c.status==="green"?"Pescable":c.status==="yellow"?"Condiciones límite":"No pescable";
+          const st = c.statusFinal || c.status;
+          const label = st==="optimal"?"✨ Condicions òptimes":st==="green"?"Pescable":st==="yellow"?"Condicions límit":"No pescable";
           tooltip.innerHTML = `<strong>${c.name}</strong><br><span style="color:${col}">${label}</span>`;
           const wRect = wrap.getBoundingClientRect();
           const sRect = svgEl.getBoundingClientRect();
