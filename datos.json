@@ -1,6 +1,6 @@
 {
   "fecha": "24 de March de 2026",
-  "hora": "10:35",
+  "hora": "21:19",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -15,11 +15,16 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 16,
       "conca": "Ter",
+      "descanso": [
+        1
+      ],
+      "temporada": null,
+      "vedaExtra": null,
       "caudal": 25.0,
-      "embalseNivel": 89.0,
+      "embalseNivel": 88.7,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 89.0%"
+      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 88.7%"
     },
     {
       "name": "Alfarràs",
@@ -34,11 +39,16 @@
       "link": "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
       "plazas": 40,
       "conca": "Noguera Ribagorzana",
-      "caudal": 13.6,
+      "descanso": [
+        5
+      ],
+      "temporada": null,
+      "vedaExtra": "3er_martes",
+      "caudal": 13.2,
       "embalseNivel": 85.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 13.6 m³/s — vadejar amb precaució · Canelles al 85.6%"
+      "nota": "Cabal alt · 13.2 m³/s — vadejar amb precaució · Canelles al 85.6%"
     },
     {
       "name": "Pedret",
@@ -53,6 +63,11 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 30,
       "conca": "Llobregat",
+      "descanso": [
+        4
+      ],
+      "temporada": null,
+      "vedaExtra": null,
       "caudal": 9.2,
       "embalseNivel": 78.7,
       "status": "yellow",
@@ -70,13 +85,16 @@
       "lat": 42.072,
       "lon": 1.319,
       "link": "https://www.saihebro.com",
-      "plazas": 25,
+      "plazas": 50,
       "conca": "Segre",
-      "caudal": 17.4,
-      "embalseNivel": 61.0,
+      "descanso": [],
+      "temporada": null,
+      "vedaExtra": null,
+      "caudal": 16.6,
+      "embalseNivel": 61.2,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 17.4 m³/s — vadejar amb precaució · Oliana al 61.0%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Oliana al 61.2%"
     },
     {
       "name": "Ponts",
@@ -89,13 +107,18 @@
       "lat": 41.916,
       "lon": 1.196,
       "link": "https://www.saihebro.com",
-      "plazas": 20,
+      "plazas": 30,
       "conca": "Segre",
-      "caudal": 17.4,
-      "embalseNivel": 90.2,
+      "descanso": [
+        1
+      ],
+      "temporada": null,
+      "vedaExtra": null,
+      "caudal": 16.6,
+      "embalseNivel": 90.1,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 17.4 m³/s — vadejar amb precaució · Rialb al 90.2%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 90.1%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -108,13 +131,16 @@
       "lat": 41.883,
       "lon": 0.9,
       "link": "https://www.saihebro.com",
-      "plazas": 20,
+      "plazas": 19,
       "conca": "Segre",
-      "caudal": 17.4,
-      "embalseNivel": 90.2,
+      "descanso": [],
+      "temporada": null,
+      "vedaExtra": null,
+      "caudal": 16.6,
+      "embalseNivel": 90.1,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 17.4 m³/s — vadejar amb precaució · Rialb al 90.2%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 90.1%"
     },
     {
       "name": "Malagarriga",
@@ -129,30 +155,98 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 25,
       "conca": "Llobregat",
-      "caudal": 6.9,
+      "descanso": [],
+      "temporada": null,
+      "vedaExtra": null,
+      "caudal": 6.7,
       "embalseNivel": 92.1,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 6.9 m³/s — vadejar amb precaució · Sant Ponç al 92.1%"
+      "nota": "Cabal alt · 6.7 m³/s — vadejar amb precaució · Sant Ponç al 92.1%"
     },
     {
-      "name": "La Torrassa",
-      "river": "Lago intensivo",
+      "name": "La Guingueta d'Àneu",
+      "river": "Noguera Pallaresa",
       "embalse_name": "La Torrassa",
+      "saih_id": "A252",
+      "embalse_id": null,
+      "umbral_ok": 8,
+      "umbral_warn": 18,
+      "lat": 42.6698,
+      "lon": 1.0475,
+      "link": "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+      "plazas": 60,
+      "conca": "Noguera Pallaresa",
+      "descanso": [],
+      "temporada": {
+        "open": [
+          4,
+          5
+        ],
+        "close": [
+          11,
+          2
+        ]
+      },
+      "vedaExtra": null,
+      "caudal": 12.7,
+      "embalseNivel": null,
+      "status": "yellow",
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 12.7 m³/s — vadejar amb precaució"
+    },
+    {
+      "name": "Barruera",
+      "river": "Noguera de Tor",
+      "embalse_name": "Barruera",
+      "saih_id": "A137",
+      "embalse_id": null,
+      "umbral_ok": 5,
+      "umbral_warn": 12,
+      "lat": 42.5232,
+      "lon": 0.8288,
+      "link": "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+      "plazas": 40,
+      "conca": "Noguera Ribagorzana",
+      "descanso": [],
+      "temporada": {
+        "open": [
+          4,
+          12
+        ],
+        "close": [
+          10,
+          12
+        ]
+      },
+      "vedaExtra": null,
+      "caudal": 13.2,
+      "embalseNivel": null,
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 13.2 m³/s — no recomanable pescar"
+    },
+    {
+      "name": "Boadella",
+      "river": "Río Muga",
+      "embalse_name": "Darnius-Boadella",
       "saih_id": null,
       "embalse_id": null,
-      "umbral_ok": 999,
-      "umbral_warn": 999,
-      "lat": 42.2,
-      "lon": 1.05,
-      "link": "https://www.embalses.net",
-      "plazas": 50,
-      "conca": "Noguera Pallaresa",
-      "caudal": null,
+      "umbral_ok": 4,
+      "umbral_warn": 10,
+      "lat": 42.3165,
+      "lon": 2.9027,
+      "link": "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+      "plazas": 15,
+      "conca": "Muga",
+      "descanso": [],
+      "temporada": null,
+      "vedaExtra": null,
+      "caudal": 5.0,
       "embalseNivel": null,
-      "status": "green",
-      "badge": "Pescable",
-      "nota": "Llac artificial — sense dependència de cabal"
+      "status": "yellow",
+      "badge": "Condicions límit",
+      "nota": "Cabal alt · 5.0 m³/s — vadejar amb precaució"
     }
   ]
 }
