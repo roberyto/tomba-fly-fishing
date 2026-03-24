@@ -1074,18 +1074,29 @@ function fishingScore(w) {
   return score;
 }
 
-// Determina el estado final combinando caudal + clima
+// Comprueba si un coto está en temporada hoy
+function isInSeason(coto) {
+  if (coto.name === "La Torrassa") return true; // Lago privado, abierto todo el año
+  const now = new Date();
+  const y = now.getFullYear();
+  const open  = new Date(y, 2, 1);   // 1 de marzo
+  const close = new Date(y, 9, 15);  // 15 de octubre
+  return now >= open && now <= close;
+}
+
+// Determina el estado final combinando veda + caudal + clima
 function finalStatus(coto, w) {
+  // Veda — override absoluto
+  if (!isInSeason(coto)) return { status: "red", badge: "🚫 Vedado — fuera de temporada", vedado: true };
   // Rojo siempre es rojo — el clima no puede rescatar un caudal excesivo
   if (coto.status === "red") return { status: "red", badge: coto.badge };
   const score = fishingScore(w);
   if (coto.status === "green") {
-    // Caudal pescable → el clima puede subir a óptimo o bajar a límite
     if (score >= 70) return { status: "optimal", badge: "✨ Condiciones óptimas" };
     if (score >= 45) return { status: "green",   badge: "Pescable" };
     return { status: "yellow", badge: "Clima desfavorable" };
   }
-  // Caudal amarillo (límite) → el clima puede mejorar a verde pero nunca a óptimo
+  // Caudal amarillo → clima puede mejorar a verde pero nunca a óptimo
   if (score >= 55) return { status: "green", badge: "Pescable · caudal alto" };
   return { status: "yellow", badge: coto.badge };
 }
@@ -1115,16 +1126,17 @@ async function loadWeatherAll() {
         card.querySelector(".status-pill").textContent = fs.badge;
       }
 
-      // Score para mostrar
+      // Score — solo mostrar si el coto es pescable (no rojo por caudal ni vedado)
       const score = fishingScore(w);
       const scoreColor = score >= 70 ? "var(--optimal)" : score >= 45 ? "var(--green)" : "var(--yellow)";
+      const showScore = !fs.vedado && fs.status !== "red";
 
       el.innerHTML = `
         <span class="chip">${icon} ${desc}</span>
         <span class="chip">🌡️ ${w.temp}°C</span>
         <span class="chip">💨 ${w.wind} km/h</span>
         ${w.rain > 0 ? `<span class="chip">🌧️ ${w.rain}mm</span>` : ""}
-        <span class="chip" style="color:${scoreColor};border-color:${scoreColor}20">🎣 ${score}/100</span>
+        ${showScore ? `<span class="chip" style="color:${scoreColor};border-color:${scoreColor}20">🎣 ${score}/100</span>` : ""}
         <a href="${c.link}" target="_blank" style="margin-left:auto;font-size:11px;color:var(--text3);text-decoration:none;display:flex;align-items:center;gap:3px">Datos ↗</a>
       `;
 
