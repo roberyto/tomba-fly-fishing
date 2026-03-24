@@ -128,18 +128,35 @@ def fetch_url(url, timeout=10):
         return None
 
 def get_caudals_gist():
-    url = f"https://gist.githubusercontent.com/roberyto/{GIST_ID}/raw/{GIST_FILE}"
-    text = fetch_url(url)
-    if not text:
-        print("  WARNING: No s'ha pogut llegir el Gist")
-        return {}
+    """Llegeix el Gist via API de GitHub — sempre dades fresques, sense caché."""
+    # Usem l'API en comptes de la raw URL (que té caché de 5 min a GitHub CDN)
+    url = f"https://api.github.com/gists/{GIST_ID}"
     try:
-        data = json.loads(text)
-        print(f"  OK Gist llegit — actualitzat: {data.get('actualitzat', '?')}")
-        return data.get("cotos", {})
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "TombaFlyFishing/1.0",
+            "Accept": "application/vnd.github.v3+json"
+        })
+        with urllib.request.urlopen(req, timeout=10) as r:
+            data = json.loads(r.read().decode("utf-8"))
+        content = data["files"][GIST_FILE]["content"]
+        parsed = json.loads(content)
+        print(f"  OK Gist llegit via API — actualitzat: {parsed.get('actualitzat', '?')}")
+        return parsed.get("cotos", {})
     except Exception as e:
-        print(f"  ERROR Gist: {e}")
-        return {}
+        print(f"  ERROR Gist API: {e}", file=sys.stderr)
+        # Fallback a raw URL
+        url_raw = f"https://gist.githubusercontent.com/roberyto/{GIST_ID}/raw/{GIST_FILE}"
+        text = fetch_url(url_raw)
+        if not text:
+            print("  WARNING: No s'ha pogut llegir el Gist")
+            return {}
+        try:
+            parsed = json.loads(text)
+            print(f"  OK Gist llegit via raw — actualitzat: {parsed.get('actualitzat', '?')}")
+            return parsed.get("cotos", {})
+        except Exception as e2:
+            print(f"  ERROR Gist raw: {e2}")
+            return {}
 
 def get_embalse_nivel(embalse_id):
     url = f"https://www.embalses.net/pantano-{embalse_id}-.html"
