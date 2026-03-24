@@ -645,11 +645,13 @@
       </button>
     </div>
     <div class="header-meta">
-      <span id="lastUpdate">Actualitzat: 24 de March de 2026 10:35</span>
+      <span id="lastUpdate">Actualitzat: 23 de March de 2026 08:39</span>
       <div class="meta-dot"></div>
       <span class="trend-badge">✅ 1 coto pescable</span>
       <div class="meta-dot"></div>
-      <button class="help-btn" onclick="openModal()">¿Cómo actualizar?</button>
+      <button class="help-btn" onclick="openModal()">¿Cómo funciona?</button>
+      <span style="color:var(--text3);font-size:11px">·</span>
+      <button class="help-btn" onclick="openModalScore()">¿Cómo se calcula? 🎣</button>
     </div>
     <div id="moonBadge" class="moon-badge"></div>
   </header>
@@ -740,27 +742,124 @@
 <!-- Modal ayuda actualización -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal">
-    <div class="modal-title">Cómo actualizar los datos</div>
+    <div class="modal-title">Cómo funcionan los datos</div>
     <div class="modal-sub">Los datos se actualizan automáticamente. Así funciona:</div>
     <ul class="modal-steps">
       <li class="step">
         <div class="step-num">1</div>
-        <span>Cada hora, el servidor consulta <strong>SAIH Ebro</strong> y <strong>ACA</strong> y guarda los caudales</span>
+        <span>Cada hora, un servidor consulta <strong>SAIH Ebro</strong> y <strong>ACA</strong> y guarda los caudales en tiempo real</span>
       </li>
       <li class="step">
         <div class="step-num">2</div>
-        <span>Cada 2 horas, GitHub actualiza automáticamente esta página con los datos frescos</span>
+        <span>Cada 2 horas, esta página se actualiza automáticamente con los datos frescos de caudal y embalse</span>
       </li>
       <li class="step">
         <div class="step-num">3</div>
-        <span>El <strong>clima</strong> y la puntuación <strong>🎣/100</strong> se calculan en tiempo real al abrir la app</span>
-      </li>
-      <li class="step">
-        <div class="step-num">4</div>
-        <span>El semáforo combina <strong>caudal + clima</strong> — morado ✨ significa condiciones óptimas para mosca</span>
+        <span>Al abrir la app, el <strong>clima actual</strong> se obtiene en tiempo real y se calcula la puntuación 🎣</span>
       </li>
     </ul>
-    <button class="modal-close" onclick="closeModal()">Entendido</button>
+    <button class="modal-close" onclick="closeModal(); openModalScore()">¿Cómo se calcula la puntuación? →</button>
+    <button class="modal-close" style="margin-top:8px;background:var(--bg3)" onclick="closeModal()">Cerrar</button>
+  </div>
+</div>
+
+<!-- Modal puntuación -->
+<div class="modal-overlay" id="modalScore" onclick="closeModalScore(event)">
+  <div class="modal" style="max-height:85vh;overflow-y:auto">
+    <div class="modal-title">¿Cómo calculamos la puntuación? 🎣</div>
+    <div class="modal-sub">La puntuación va de 0 a 100 y combina 4 factores clave para la pesca a mosca. El semáforo final mezcla el caudal con esta puntuación.</div>
+
+    <!-- Semáforos -->
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px">
+      <div style="background:var(--optimal-bg);border:1px solid var(--optimal-border);border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px">
+        <span style="font-size:18px">✨</span>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:var(--optimal)">Condiciones óptimas</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">Caudal pescable + puntuación ≥ 70. La jornada perfecta.</div>
+        </div>
+      </div>
+      <div style="background:var(--green-bg);border:1px solid var(--green-border);border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px">
+        <span style="font-size:18px">🟢</span>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:var(--green)">Pescable</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">Caudal OK + puntuación 45–69. Vale la pena ir.</div>
+        </div>
+      </div>
+      <div style="background:var(--yellow-bg);border:1px solid var(--yellow-border);border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px">
+        <span style="font-size:18px">🟡</span>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:var(--yellow)">Condiciones límite</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">Caudal algo alto o clima desfavorable. Pesca posible pero difícil.</div>
+        </div>
+      </div>
+      <div style="background:var(--red-bg);border:1px solid var(--red-border);border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px">
+        <span style="font-size:18px">🔴</span>
+        <div>
+          <div style="font-size:13px;font-weight:500;color:var(--red)">No pescable</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">Caudal excesivo. El río no es seguro ni practicable.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Factores -->
+    <div style="font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px">Los 4 factores de la puntuación</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px">
+
+      <div style="background:var(--bg3);border-radius:10px;padding:12px 14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <span style="font-size:13px;font-weight:500">🌡️ Temperatura</span>
+          <span style="font-size:11px;color:var(--text3)">hasta 30 pts</span>
+        </div>
+        <div style="font-size:11px;color:var(--text2);line-height:1.6">
+          <span style="color:var(--green)">●</span> 12–18°C → 30 pts &nbsp;·&nbsp; La temperatura ideal activa los insectos y sube la trucha<br>
+          <span style="color:var(--yellow)">●</span> 8–22°C → 18 pts &nbsp;·&nbsp; Aceptable<br>
+          <span style="color:var(--red)">●</span> Fuera de rango → 5 pts &nbsp;·&nbsp; Fría o muy caliente, poco movimiento
+        </div>
+      </div>
+
+      <div style="background:var(--bg3);border-radius:10px;padding:12px 14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <span style="font-size:13px;font-weight:500">💨 Viento</span>
+          <span style="font-size:11px;color:var(--text3)">hasta 30 pts</span>
+        </div>
+        <div style="font-size:11px;color:var(--text2);line-height:1.6">
+          <span style="color:var(--green)">●</span> &lt;10 km/h → 30 pts &nbsp;·&nbsp; Lanzamiento limpio, mosca seca a la perfección<br>
+          <span style="color:var(--yellow)">●</span> 10–20 km/h → 18 pts &nbsp;·&nbsp; Manejable con experiencia<br>
+          <span style="color:var(--red)">●</span> &gt;30 km/h → 0 pts &nbsp;·&nbsp; Imposible lanzar con precisión
+        </div>
+      </div>
+
+      <div style="background:var(--bg3);border-radius:10px;padding:12px 14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <span style="font-size:13px;font-weight:500">🌧️ Lluvia</span>
+          <span style="font-size:11px;color:var(--text3)">hasta 25 pts</span>
+        </div>
+        <div style="font-size:11px;color:var(--text2);line-height:1.6">
+          <span style="color:var(--green)">●</span> Sin lluvia → 25 pts &nbsp;·&nbsp; Agua clara, trucha visible<br>
+          <span style="color:var(--yellow)">●</span> Llovizna (&lt;1mm) → 10 pts &nbsp;·&nbsp; Puede activar eclosiones<br>
+          <span style="color:var(--red)">●</span> Lluvia → 0 pts &nbsp;·&nbsp; Agua turbia, trucha al fondo
+        </div>
+      </div>
+
+      <div style="background:var(--bg3);border-radius:10px;padding:12px 14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <span style="font-size:13px;font-weight:500">☁️ Nubosidad</span>
+          <span style="font-size:11px;color:var(--text3)">hasta 15 pts</span>
+        </div>
+        <div style="font-size:11px;color:var(--text2);line-height:1.6">
+          <span style="color:var(--green)">●</span> 30–70% nubes → 15 pts &nbsp;·&nbsp; Lo mejor: activa insectos sin deslumbrar<br>
+          <span style="color:var(--yellow)">●</span> Muy nublado (&gt;70%) → 8 pts &nbsp;·&nbsp; Bueno pero menos eclosión<br>
+          <span style="color:var(--red)">●</span> Cielo despejado → 5 pts &nbsp;·&nbsp; Sol directo hace a la trucha más precavida
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background:var(--surface2);border-radius:10px;padding:12px 14px;font-size:11px;color:var(--text3);line-height:1.6">
+      ⚠️ Estos valores son orientativos y se basan en criterios generales de pesca a mosca. Las condiciones reales pueden variar. Verifica siempre antes de salir.
+    </div>
+
+    <button class="modal-close" style="margin-top:12px" onclick="closeModalScore()">Entendido</button>
   </div>
 </div>
 
@@ -770,50 +869,50 @@ const PERMISO_URL = "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_pub
 const COTOS = [
   {
     name: "Anglès – El Pasteral", river: "Río Ter", embalse: "Susqueda",
-    caudal: 25.0, embalseNivel: 89.0, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 89.0%",
+    caudal: 25.0, embalseNivel: 89.2, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 89.2%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633
   },
   {
     name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
-    caudal: 13.6, embalseNivel: 85.6, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 13.6 m³/s — vadejar amb precaució · Canelles al 85.6%",
+    caudal: 13.2, embalseNivel: 85.7, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 13.2 m³/s — vadejar amb precaució · Canelles al 85.7%",
     link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
     plazas: 40, conca: "Noguera Ribagorzana", lat: 41.723, lon: 0.558
   },
   {
     name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
-    caudal: 9.2, embalseNivel: 78.7, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 9.2 m³/s — vadejar amb precaució · La Baells al 78.7%",
+    caudal: 9.5, embalseNivel: 78.8, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 9.5 m³/s — vadejar amb precaució · La Baells al 78.8%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848
   },
   {
     name: "Oliana", river: "Río Segre", embalse: "Oliana",
-    caudal: 17.4, embalseNivel: 61.0, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 17.4 m³/s — vadejar amb precaució · Oliana al 61.0%",
+    caudal: 18.1, embalseNivel: 60.7, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 60.7%",
     link: "https://www.saihebro.com",
     plazas: 25, conca: "Segre", lat: 42.072, lon: 1.319
   },
   {
     name: "Ponts", river: "Río Segre", embalse: "Rialb",
-    caudal: 17.4, embalseNivel: 90.2, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 17.4 m³/s — vadejar amb precaució · Rialb al 90.2%",
+    caudal: 18.1, embalseNivel: 90.4, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.4%",
     link: "https://www.saihebro.com",
     plazas: 20, conca: "Segre", lat: 41.916, lon: 1.196
   },
   {
     name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
-    caudal: 17.4, embalseNivel: 90.2, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 17.4 m³/s — vadejar amb precaució · Rialb al 90.2%",
+    caudal: 18.1, embalseNivel: 90.4, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.4%",
     link: "https://www.saihebro.com",
     plazas: 20, conca: "Segre", lat: 41.883, lon: 0.9
   },
   {
     name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
-    caudal: 6.9, embalseNivel: 92.1, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 6.9 m³/s — vadejar amb precaució · Sant Ponç al 92.1%",
+    caudal: 6.5, embalseNivel: 92.2, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 6.5 m³/s — vadejar amb precaució · Sant Ponç al 92.2%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74
   },
@@ -911,6 +1010,12 @@ function closeModal(e){
     document.getElementById("modalOverlay").classList.remove("open");
   }
 }
+function openModalScore(){ document.getElementById("modalScore").classList.add("open"); }
+function closeModalScore(e){
+  if(!e || e.target===document.getElementById("modalScore")){
+    document.getElementById("modalScore").classList.remove("open");
+  }
+}
 
 // ── CLIMA en tiempo real (Open-Meteo, gratis, sin API key) ──────────────────
 const WMO = {
@@ -971,13 +1076,18 @@ function fishingScore(w) {
 
 // Determina el estado final combinando caudal + clima
 function finalStatus(coto, w) {
-  // Si el caudal ya es rojo → siempre rojo
+  // Rojo siempre es rojo — el clima no puede rescatar un caudal excesivo
   if (coto.status === "red") return { status: "red", badge: coto.badge };
   const score = fishingScore(w);
-  // Caudal OK (green o yellow)
-  if (score >= 70) return { status: "optimal", badge: "✨ Condiciones óptimas" };
-  if (score >= 45) return { status: "green",   badge: "Pescable" };
-  return { status: coto.status, badge: coto.badge }; // Mantener estado original
+  if (coto.status === "green") {
+    // Caudal pescable → el clima puede subir a óptimo o bajar a límite
+    if (score >= 70) return { status: "optimal", badge: "✨ Condiciones óptimas" };
+    if (score >= 45) return { status: "green",   badge: "Pescable" };
+    return { status: "yellow", badge: "Clima desfavorable" };
+  }
+  // Caudal amarillo (límite) → el clima puede mejorar a verde pero nunca a óptimo
+  if (score >= 55) return { status: "green", badge: "Pescable · caudal alto" };
+  return { status: "yellow", badge: coto.badge };
 }
 
 async function loadWeatherAll() {
