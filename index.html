@@ -35,6 +35,9 @@
     --red: #f05a5a;
     --red-bg: rgba(240,90,90,0.12);
     --red-border: rgba(240,90,90,0.25);
+    --optimal: #a78bfa;
+    --optimal-bg: rgba(167,139,250,0.12);
+    --optimal-border: rgba(167,139,250,0.25);
     --accent: #5adb8a;
     --radius: 16px;
     --radius-sm: 10px;
@@ -218,6 +221,7 @@
   .card.green { border-color: var(--green-border); }
   .card.yellow { border-color: var(--yellow-border); }
   .card.red { border-color: rgba(240,90,90,0.15); }
+  .card.optimal { border-color: var(--optimal-border); }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(12px); }
@@ -256,6 +260,7 @@
   .sem.green { background: var(--green); color: var(--green); }
   .sem.yellow { background: var(--yellow); color: var(--yellow); }
   .sem.red { background: var(--red); color: var(--red); }
+  .sem.optimal { background: var(--optimal); color: var(--optimal); }
 
   .stats {
     display: flex;
@@ -299,6 +304,7 @@
   .status-pill.green { background: var(--green-bg); color: var(--green); }
   .status-pill.yellow { background: var(--yellow-bg); color: var(--yellow); }
   .status-pill.red { background: var(--red-bg); color: var(--red); }
+  .status-pill.optimal { background: var(--optimal-bg); color: var(--optimal); }
 
   .card-nota {
     font-size: 11px;
@@ -639,7 +645,7 @@
       </button>
     </div>
     <div class="header-meta">
-      <span id="lastUpdate">Actualitzat: 24 de March de 2026 08:07</span>
+      <span id="lastUpdate">Actualitzat: 23 de March de 2026 08:39</span>
       <div class="meta-dot"></div>
       <span class="trend-badge">✅ 1 coto pescable</span>
       <div class="meta-dot"></div>
@@ -649,8 +655,9 @@
   </header>
 
   <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:var(--optimal)"></div>Condiciones óptimas</div>
     <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Pescable</div>
-    <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>Condiciones límite</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>Límite</div>
     <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>No pescable</div>
   </div>
 
@@ -734,23 +741,23 @@
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal">
     <div class="modal-title">Cómo actualizar los datos</div>
-    <div class="modal-sub">Los datos se actualizan manualmente. Sigue estos pasos:</div>
+    <div class="modal-sub">Los datos se actualizan automáticamente. Así funciona:</div>
     <ul class="modal-steps">
       <li class="step">
         <div class="step-num">1</div>
-        <span>Consulta el caudal actual en <strong>ACA Temps Real</strong> (enlace abajo) o en <strong>saihebro.com</strong></span>
+        <span>Cada hora, el servidor consulta <strong>SAIH Ebro</strong> y <strong>ACA</strong> y guarda los caudales</span>
       </li>
       <li class="step">
         <div class="step-num">2</div>
-        <span>Consulta el nivel de embalses en <strong>embalses.net</strong> — busca Susqueda, Canelles, La Baells, etc.</span>
+        <span>Cada 2 horas, GitHub actualiza automáticamente esta página con los datos frescos</span>
       </li>
       <li class="step">
         <div class="step-num">3</div>
-        <span>Abre <strong>Claude.ai</strong> y pídele: <em>"Actualiza el dashboard de intensivos de pesca con estos datos: [datos que has visto]"</em></span>
+        <span>El <strong>clima</strong> y la puntuación <strong>🎣/100</strong> se calculan en tiempo real al abrir la app</span>
       </li>
       <li class="step">
         <div class="step-num">4</div>
-        <span>Claude generará un nuevo archivo HTML actualizado que puedes volver a subir a Netlify</span>
+        <span>El semáforo combina <strong>caudal + clima</strong> — morado ✨ significa condiciones óptimas para mosca</span>
       </li>
     </ul>
     <button class="modal-close" onclick="closeModal()">Entendido</button>
@@ -763,50 +770,50 @@ const PERMISO_URL = "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_pub
 const COTOS = [
   {
     name: "Anglès – El Pasteral", river: "Río Ter", embalse: "Susqueda",
-    caudal: 25.0, embalseNivel: 89.0, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 89.0%",
+    caudal: 25.0, embalseNivel: 89.2, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 89.2%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633
   },
   {
     name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
-    caudal: 12.8, embalseNivel: 85.6, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 12.8 m³/s — vadejar amb precaució · Canelles al 85.6%",
+    caudal: 13.2, embalseNivel: 85.7, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 13.2 m³/s — vadejar amb precaució · Canelles al 85.7%",
     link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
     plazas: 40, conca: "Noguera Ribagorzana", lat: 41.723, lon: 0.558
   },
   {
     name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
-    caudal: 9.5, embalseNivel: 78.7, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 9.5 m³/s — vadejar amb precaució · La Baells al 78.7%",
+    caudal: 9.5, embalseNivel: 78.8, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 9.5 m³/s — vadejar amb precaució · La Baells al 78.8%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848
   },
   {
     name: "Oliana", river: "Río Segre", embalse: "Oliana",
-    caudal: 18.1, embalseNivel: 61.0, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 61.0%",
+    caudal: 18.1, embalseNivel: 60.7, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 60.7%",
     link: "https://www.saihebro.com",
     plazas: 25, conca: "Segre", lat: 42.072, lon: 1.319
   },
   {
     name: "Ponts", river: "Río Segre", embalse: "Rialb",
-    caudal: 18.1, embalseNivel: 90.2, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.2%",
+    caudal: 18.1, embalseNivel: 90.4, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.4%",
     link: "https://www.saihebro.com",
     plazas: 20, conca: "Segre", lat: 41.916, lon: 1.196
   },
   {
     name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
-    caudal: 18.1, embalseNivel: 90.2, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.2%",
+    caudal: 18.1, embalseNivel: 90.4, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.4%",
     link: "https://www.saihebro.com",
     plazas: 20, conca: "Segre", lat: 41.883, lon: 0.9
   },
   {
     name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
-    caudal: 7.5, embalseNivel: 92.1, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 7.5 m³/s — vadejar amb precaució · Sant Ponç al 92.1%",
+    caudal: 6.5, embalseNivel: 92.2, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 6.5 m³/s — vadejar amb precaució · Sant Ponç al 92.2%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74
   },
@@ -928,7 +935,7 @@ function weatherIcon(code) {
 }
 
 async function fetchWeather(lat, lon) {
-  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weathercode,windspeed_10m,precipitation&wind_speed_unit=kmh&timezone=Europe/Madrid`;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weathercode,windspeed_10m,precipitation,cloudcover&wind_speed_unit=kmh&timezone=Europe/Madrid`;
   const r = await fetch(url);
   const d = await r.json();
   const c = d.current;
@@ -936,11 +943,45 @@ async function fetchWeather(lat, lon) {
     temp: Math.round(c.temperature_2m),
     code: c.weathercode,
     wind: Math.round(c.windspeed_10m),
-    rain: c.precipitation
+    rain: c.precipitation,
+    cloud: c.cloudcover ?? 50
   };
 }
 
+// Calcula puntuación de condiciones (0-100) para pesca a mosca
+function fishingScore(w) {
+  let score = 0;
+  // Temperatura (ideal 12-18°C)
+  if (w.temp >= 12 && w.temp <= 18) score += 30;
+  else if (w.temp >= 8 && w.temp <= 22) score += 18;
+  else score += 5;
+  // Viento (ideal <10 km/h)
+  if (w.wind < 10) score += 30;
+  else if (w.wind <= 20) score += 18;
+  else if (w.wind <= 30) score += 8;
+  // Lluvia (ideal: sin lluvia)
+  if (w.rain === 0) score += 25;
+  else if (w.rain < 1) score += 10;
+  // Nubosidad (ideal 30-70%: activa insectos sin deslumbrar)
+  if (w.cloud >= 30 && w.cloud <= 70) score += 15;
+  else if (w.cloud > 70) score += 8;
+  else score += 5; // Cielo despejado peor para la trucha
+  return score;
+}
+
+// Determina el estado final combinando caudal + clima
+function finalStatus(coto, w) {
+  // Si el caudal ya es rojo → siempre rojo
+  if (coto.status === "red") return { status: "red", badge: coto.badge };
+  const score = fishingScore(w);
+  // Caudal OK (green o yellow)
+  if (score >= 70) return { status: "optimal", badge: "✨ Condiciones óptimas" };
+  if (score >= 45) return { status: "green",   badge: "Pescable" };
+  return { status: coto.status, badge: coto.badge }; // Mantener estado original
+}
+
 async function loadWeatherAll() {
+  let g=0, y=0, r=0, o=0;
   for (let i = 0; i < COTOS.length; i++) {
     const c = COTOS[i];
     const el = document.getElementById(`weather-${i}`);
@@ -949,16 +990,55 @@ async function loadWeatherAll() {
       const w = await fetchWeather(c.lat, c.lon);
       const desc = WMO[w.code] || "Variable";
       const icon = weatherIcon(w.code);
+
+      // Calcular estado final con clima
+      const fs = c.status === "green" || c.status === "yellow" || c.status === "red"
+        ? finalStatus(c, w)
+        : { status: c.status, badge: c.badge };
+
+      // Actualizar tarjeta visualmente
+      const card = el.closest(".card");
+      if (card && fs.status !== c.status) {
+        card.className = `card ${fs.status}`;
+        card.querySelector(".sem").className = `sem ${fs.status}`;
+        card.querySelector(".status-pill").className = `status-pill ${fs.status}`;
+        card.querySelector(".status-pill").textContent = fs.badge;
+      }
+
+      // Score para mostrar
+      const score = fishingScore(w);
+      const scoreColor = score >= 70 ? "var(--optimal)" : score >= 45 ? "var(--green)" : "var(--yellow)";
+
       el.innerHTML = `
         <span class="chip">${icon} ${desc}</span>
         <span class="chip">🌡️ ${w.temp}°C</span>
         <span class="chip">💨 ${w.wind} km/h</span>
         ${w.rain > 0 ? `<span class="chip">🌧️ ${w.rain}mm</span>` : ""}
+        <span class="chip" style="color:${scoreColor};border-color:${scoreColor}20">🎣 ${score}/100</span>
         <a href="${c.link}" target="_blank" style="margin-left:auto;font-size:11px;color:var(--text3);text-decoration:none;display:flex;align-items:center;gap:3px">Datos ↗</a>
       `;
+
+      // Contar para el resumen
+      const ef = card ? card.className.split(" ")[1] : fs.status;
+      if (ef === "optimal") o++;
+      else if (ef === "green") g++;
+      else if (ef === "yellow") y++;
+      else r++;
+
     } catch {
       el.innerHTML = `<span class="chip" style="color:var(--text3)">Clima no disponible</span>`;
+      if (c.status === "green") g++;
+      else if (c.status === "yellow") y++;
+      else r++;
     }
+  }
+  // Actualizar resumen con óptimos
+  document.getElementById("sumGreen").textContent = g + o;
+  document.getElementById("sumYellow").textContent = y;
+  document.getElementById("sumRed").textContent = r;
+  // Cambiar label del resumen si hay óptimos
+  if (o > 0) {
+    document.getElementById("sumGreen").style.color = "var(--optimal)";
   }
 }
 
