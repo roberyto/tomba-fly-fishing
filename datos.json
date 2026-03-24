@@ -1,6 +1,6 @@
 {
   "fecha": "24 de March de 2026",
-  "hora": "08:07",
+  "hora": "10:35",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -34,11 +34,11 @@
       "link": "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
       "plazas": 40,
       "conca": "Noguera Ribagorzana",
-      "caudal": 12.8,
+      "caudal": 13.6,
       "embalseNivel": 85.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 12.8 m³/s — vadejar amb precaució · Canelles al 85.6%"
+      "nota": "Cabal alt · 13.6 m³/s — vadejar amb precaució · Canelles al 85.6%"
     },
     {
       "name": "Pedret",
@@ -53,11 +53,11 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 30,
       "conca": "Llobregat",
-      "caudal": 9.5,
+      "caudal": 9.2,
       "embalseNivel": 78.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 9.5 m³/s — vadejar amb precaució · La Baells al 78.7%"
+      "nota": "Cabal alt · 9.2 m³/s — vadejar amb precaució · La Baells al 78.7%"
     },
     {
       "name": "Oliana",
@@ -72,11 +72,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 25,
       "conca": "Segre",
-      "caudal": 18.1,
+      "caudal": 17.4,
       "embalseNivel": 61.0,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 61.0%"
+      "nota": "Cabal alt · 17.4 m³/s — vadejar amb precaució · Oliana al 61.0%"
     },
     {
       "name": "Ponts",
@@ -91,11 +91,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": 18.1,
+      "caudal": 17.4,
       "embalseNivel": 90.2,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.2%"
+      "nota": "Cabal alt · 17.4 m³/s — vadejar amb precaució · Rialb al 90.2%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -110,11 +110,11 @@
       "link": "https://www.saihebro.com",
       "plazas": 20,
       "conca": "Segre",
-      "caudal": 18.1,
+      "caudal": 17.4,
       "embalseNivel": 90.2,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.2%"
+      "nota": "Cabal alt · 17.4 m³/s — vadejar amb precaució · Rialb al 90.2%"
     },
     {
       "name": "Malagarriga",
@@ -129,11 +129,11 @@
       "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
       "plazas": 25,
       "conca": "Llobregat",
-      "caudal": 7.5,
+      "caudal": 6.9,
       "embalseNivel": 92.1,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 7.5 m³/s — vadejar amb precaució · Sant Ponç al 92.1%"
+      "nota": "Cabal alt · 6.9 m³/s — vadejar amb precaució · Sant Ponç al 92.1%"
     },
     {
       "name": "La Torrassa",
