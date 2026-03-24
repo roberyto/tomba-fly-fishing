@@ -872,56 +872,100 @@ const COTOS = [
     caudal: 25.0, embalseNivel: 89.2, status: "red", badge: "No pescable",
     nota: "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 89.2%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633
+    plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633,
+    descanso: [1], // Lunes
+    temporada: null, // Todo el año
+    vedaExtra: null
   },
   {
     name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
     caudal: 13.2, embalseNivel: 85.7, status: "yellow", badge: "Condicions límit",
     nota: "Cabal alt · 13.2 m³/s — vadejar amb precaució · Canelles al 85.7%",
     link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
-    plazas: 40, conca: "Noguera Ribagorzana", lat: 41.723, lon: 0.558
+    plazas: 40, conca: "Noguera Ribagorzana", lat: 41.723, lon: 0.558,
+    descanso: [5], // Viernes
+    temporada: null, // Todo el año
+    vedaExtra: "3er_martes" // 3er martes de cada mes
   },
   {
     name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
     caudal: 9.5, embalseNivel: 78.8, status: "yellow", badge: "Condicions límit",
     nota: "Cabal alt · 9.5 m³/s — vadejar amb precaució · La Baells al 78.8%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848
+    plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848,
+    descanso: [4], // Jueves
+    temporada: null, // Todo el año
+    vedaExtra: null
   },
   {
     name: "Oliana", river: "Río Segre", embalse: "Oliana",
     caudal: 18.1, embalseNivel: 60.7, status: "yellow", badge: "Condicions límit",
     nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 60.7%",
     link: "https://www.saihebro.com",
-    plazas: 25, conca: "Segre", lat: 42.072, lon: 1.319
+    plazas: 50, conca: "Segre", lat: 42.072, lon: 1.319,
+    descanso: [], // Ninguno
+    temporada: null, // Todo el año
+    vedaExtra: null
   },
   {
     name: "Ponts", river: "Río Segre", embalse: "Rialb",
     caudal: 18.1, embalseNivel: 90.4, status: "yellow", badge: "Condicions límit",
     nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.4%",
     link: "https://www.saihebro.com",
-    plazas: 20, conca: "Segre", lat: 41.916, lon: 1.196
+    plazas: 30, conca: "Segre", lat: 41.916, lon: 1.196,
+    descanso: [1], // Lunes
+    temporada: null, // Todo el año
+    vedaExtra: null
   },
   {
     name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
     caudal: 18.1, embalseNivel: 90.4, status: "yellow", badge: "Condicions límit",
     nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 90.4%",
     link: "https://www.saihebro.com",
-    plazas: 20, conca: "Segre", lat: 41.883, lon: 0.9
+    plazas: 19, conca: "Segre", lat: 41.883, lon: 0.9,
+    descanso: [], // Ninguno
+    temporada: null, // Todo el año
+    vedaExtra: null
   },
   {
     name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
     caudal: 6.5, embalseNivel: 92.2, status: "yellow", badge: "Condicions límit",
     nota: "Cabal alt · 6.5 m³/s — vadejar amb precaució · Sant Ponç al 92.2%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
-    plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74
+    plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74,
+    descanso: [], // Ninguno
+    temporada: null, // Todo el año
+    vedaExtra: null
   },
   {
-    name: "La Torrassa", river: "Lago intensivo", embalse: "La Torrassa",
+    name: "La Guingueta d'Àneu", river: "Noguera Pallaresa", embalse: "La Torrassa",
     caudal: null, embalseNivel: null, status: "green", badge: "Pescable",
-    nota: "Llac artificial — sense dependència de cabal",
-    link: "https://www.embalses.net",
-    plazas: 50, conca: "Noguera Pallaresa", lat: 42.2, lon: 1.05
+    nota: "Llac i riu intensiu — sense dependència de cabal",
+    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+    plazas: 60, conca: "Noguera Pallaresa", lat: 42.6698, lon: 1.0475,
+    descanso: [], // Ninguno
+    temporada: { open: [4,5], close: [11,2] }, // 5 abril - 2 noviembre
+    vedaExtra: null
+  },
+  {
+    name: "Barruera", river: "Noguera de Tor", embalse: "Barruera",
+    caudal: null, embalseNivel: null, status: "green", badge: "Pescable",
+    nota: "Riu de muntanya · Alta Ribagorça",
+    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+    plazas: 40, conca: "Noguera Ribagorzana", lat: 42.5232, lon: 0.8288,
+    descanso: [], // Ninguno
+    temporada: { open: [4,12], close: [10,12] }, // 12 abril - 12 octubre
+    vedaExtra: null
+  },
+  {
+    name: "Boadella", river: "Río Muga", embalse: "Darnius-Boadella",
+    caudal: null, embalseNivel: null, status: "green", badge: "Pescable",
+    nota: "Riu intensiu · Alt Empordà",
+    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+    plazas: 15, conca: "Muga", lat: 42.3165, lon: 2.9027,
+    descanso: [], // Ninguno
+    temporada: null, // Todo el año
+    vedaExtra: null
   }
 ];
 
@@ -1074,20 +1118,45 @@ function fishingScore(w) {
   return score;
 }
 
-// Comprueba si un coto está en temporada hoy
+// Comprueba si un coto está abierto hoy (temporada + día descanso + veda extra)
 function isInSeason(coto) {
-  if (coto.name === "La Torrassa") return true; // Lago privado, abierto todo el año
   const now = new Date();
   const y = now.getFullYear();
-  const open  = new Date(y, 2, 1);   // 1 de marzo
-  const close = new Date(y, 9, 15);  // 15 de octubre
-  return now >= open && now <= close;
+  const dow = now.getDay(); // 0=dom, 1=lun, 2=mar, 3=mie, 4=jue, 5=vie, 6=sab
+
+  // Comprobar temporada específica
+  if (coto.temporada) {
+    const { open, close } = coto.temporada;
+    const fechaOpen  = new Date(y, open[0]-1,  open[1]);
+    const fechaClose = new Date(y, close[0]-1, close[1]);
+    if (now < fechaOpen || now > fechaClose) {
+      return { abierto: false, motivo: "🚫 Fuera de temporada" };
+    }
+  }
+
+  // Comprobar día de descanso semanal
+  if (coto.descanso && coto.descanso.includes(dow)) {
+    const dias = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+    return { abierto: false, motivo: `🚫 Cerrado — día de descanso (${dias[dow]})` };
+  }
+
+  // Comprobar veda del 3er martes del mes (Alfarràs)
+  if (coto.vedaExtra === "3er_martes" && dow === 2) {
+    // Es martes — comprobar si es el 3er del mes
+    const day = now.getDate();
+    if (day >= 15 && day <= 21) {
+      return { abierto: false, motivo: "🚫 Cerrado — 3er martes del mes (caudales)" };
+    }
+  }
+
+  return { abierto: true, motivo: null };
 }
 
 // Determina el estado final combinando veda + caudal + clima
 function finalStatus(coto, w) {
   // Veda — override absoluto
-  if (!isInSeason(coto)) return { status: "red", badge: "🚫 Vedado — fuera de temporada", vedado: true };
+  const season = isInSeason(coto);
+  if (!season.abierto) return { status: "red", badge: season.motivo, vedado: true };
   // Rojo siempre es rojo — el clima no puede rescatar un caudal excesivo
   if (coto.status === "red") return { status: "red", badge: coto.badge };
   const score = fishingScore(w);
@@ -1266,7 +1335,7 @@ function renderMap() {
         .attr("fill","#1a2e1e").attr("stroke","#2d5c38").attr("stroke-width",1.2);
 
       // Usar COTOS directamente — ya tienen lat/lon y status
-      const shorts = ["Anglès","Alfarràs","Pedret","Oliana","Ponts","Alòs","Malagarriga","Torrassa"];
+      const shorts = ["Anglès","Alfarràs","Pedret","Oliana","Ponts","Alòs","Malagarriga","Guingueta","Barruera","Boadella"];
 
       COTOS.forEach((c, i) => {
         const [px, py] = projection([c.lon, c.lat]);
