@@ -89,8 +89,8 @@ COTOS = [
     {
         "name": "La Guingueta d'Àneu",
         "river": "Noguera Pallaresa", "embalse_name": "La Torrassa",
-        "saih_id": None, "embalse_id": None,
-        "umbral_ok": 999, "umbral_warn": 999,
+        "saih_id": "A252", "embalse_id": None,
+        "umbral_ok": 8, "umbral_warn": 18,
         "lat": 42.6698, "lon": 1.0475,
         "link": "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
         "plazas": 60, "conca": "Noguera Pallaresa",
@@ -99,8 +99,8 @@ COTOS = [
     {
         "name": "Barruera",
         "river": "Noguera de Tor", "embalse_name": "Barruera",
-        "saih_id": None, "embalse_id": None,
-        "umbral_ok": 999, "umbral_warn": 999,
+        "saih_id": "A137", "embalse_id": None,  # Aprox. Pont de Suert
+        "umbral_ok": 5, "umbral_warn": 12,
         "lat": 42.5232, "lon": 0.8288,
         "link": "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
         "plazas": 40, "conca": "Noguera Ribagorzana",
@@ -110,7 +110,7 @@ COTOS = [
         "name": "Boadella",
         "river": "Río Muga", "embalse_name": "Darnius-Boadella",
         "saih_id": None, "embalse_id": None,
-        "umbral_ok": 999, "umbral_warn": 999,
+        "umbral_ok": 4, "umbral_warn": 10,
         "lat": 42.3165, "lon": 2.9027,
         "link": "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
         "plazas": 15, "conca": "Muga",
