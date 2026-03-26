@@ -1,6 +1,6 @@
 {
   "fecha": "26 de March de 2026",
-  "hora": "07:26",
+  "hora": "08:37",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -44,11 +44,11 @@
       ],
       "temporada": null,
       "vedaExtra": "3er_martes",
-      "caudal": 12.4,
+      "caudal": 12.8,
       "embalseNivel": 85.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 12.4 m³/s — vadejar amb precaució · Canelles al 85.6%"
+      "nota": "Cabal alt · 12.8 m³/s — vadejar amb precaució · Canelles al 85.6%"
     },
     {
       "name": "Pedret",
@@ -90,11 +90,11 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 18.1,
+      "caudal": 15.9,
       "embalseNivel": 61.4,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 61.4%"
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 61.4%"
     },
     {
       "name": "Ponts",
@@ -114,11 +114,11 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 18.1,
+      "caudal": 15.9,
       "embalseNivel": 89.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 89.6%"
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 89.6%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -136,11 +136,11 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 18.1,
+      "caudal": 15.9,
       "embalseNivel": 89.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 89.6%"
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 89.6%"
     },
     {
       "name": "Malagarriga",
@@ -189,11 +189,11 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 17.2,
+      "caudal": 18.0,
       "embalseNivel": null,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 17.2 m³/s — vadejar amb precaució"
+      "nota": "Cabal alt · 18.0 m³/s — vadejar amb precaució"
     },
     {
       "name": "Barruera",
@@ -220,11 +220,11 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 12.4,
+      "caudal": 12.8,
       "embalseNivel": null,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 12.4 m³/s — no recomanable pescar"
+      "nota": "Cabal excessiu · 12.8 m³/s — no recomanable pescar"
     },
     {
       "name": "Boadella",
