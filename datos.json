@@ -1,6 +1,6 @@
 {
-  "fecha": "27 de March de 2026",
-  "hora": "09:21",
+  "fecha": "28 de March de 2026",
+  "hora": "07:57",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 24.2,
-      "embalseNivel": 89.1,
+      "embalseNivel": 88.7,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 24.2 m³/s — no recomanable pescar · Susqueda al 89.1%"
+      "nota": "Cabal excessiu · 24.2 m³/s — no recomanable pescar · Susqueda al 88.7%"
     },
     {
       "name": "Alfarràs",
@@ -91,10 +91,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 16.6,
-      "embalseNivel": 62.6,
+      "embalseNivel": 63.3,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Oliana al 62.6%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Oliana al 63.3%"
     },
     {
       "name": "Ponts",
@@ -115,10 +115,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 16.6,
-      "embalseNivel": 89.1,
+      "embalseNivel": 88.8,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 89.1%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.8%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -137,10 +137,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 16.6,
-      "embalseNivel": 89.1,
+      "embalseNivel": 88.8,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 89.1%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.8%"
     },
     {
       "name": "Malagarriga",
