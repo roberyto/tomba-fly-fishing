@@ -1,6 +1,6 @@
 {
-  "fecha": "28 de March de 2026",
-  "hora": "07:57",
+  "fecha": "29 de March de 2026",
+  "hora": "08:02",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 24.2,
-      "embalseNivel": 88.7,
+      "embalseNivel": 88.1,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 24.2 m³/s — no recomanable pescar · Susqueda al 88.7%"
+      "nota": "Cabal excessiu · 24.2 m³/s — no recomanable pescar · Susqueda al 88.1%"
     },
     {
       "name": "Alfarràs",
@@ -45,10 +45,10 @@
       "temporada": null,
       "vedaExtra": "3er_martes",
       "caudal": 11.6,
-      "embalseNivel": 85.7,
+      "embalseNivel": 85.9,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 85.7%"
+      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 85.9%"
     },
     {
       "name": "Pedret",
@@ -91,10 +91,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 16.6,
-      "embalseNivel": 63.3,
+      "embalseNivel": 63.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Oliana al 63.3%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Oliana al 63.7%"
     },
     {
       "name": "Ponts",
@@ -115,10 +115,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 16.6,
-      "embalseNivel": 88.8,
+      "embalseNivel": 88.4,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.8%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.4%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -137,10 +137,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 16.6,
-      "embalseNivel": 88.8,
+      "embalseNivel": 88.4,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.8%"
+      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.4%"
     },
     {
       "name": "Malagarriga",
