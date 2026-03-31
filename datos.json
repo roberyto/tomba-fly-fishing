@@ -1,6 +1,6 @@
 {
-  "fecha": "30 de March de 2026",
-  "hora": "10:43",
+  "fecha": "31 de March de 2026",
+  "hora": "09:45",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -20,11 +20,11 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 24.2,
-      "embalseNivel": 87.5,
+      "caudal": 25.0,
+      "embalseNivel": 87.0,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 24.2 m³/s — no recomanable pescar · Susqueda al 87.5%"
+      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 87.0%"
     },
     {
       "name": "Alfarràs",
@@ -44,11 +44,11 @@
       ],
       "temporada": null,
       "vedaExtra": "3er_martes",
-      "caudal": 11.6,
-      "embalseNivel": 86.0,
+      "caudal": 9.2,
+      "embalseNivel": 86.2,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.6 m³/s · Canelles al 86.0%"
+      "nota": "Condicions òptimes · 9.2 m³/s · Canelles al 86.2%"
     },
     {
       "name": "Pedret",
@@ -68,11 +68,11 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 7.9,
-      "embalseNivel": 78.0,
+      "caudal": 6.8,
+      "embalseNivel": 77.9,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 7.9 m³/s — vadejar amb precaució · La Baells al 78.0%"
+      "nota": "Cabal alt · 6.8 m³/s — vadejar amb precaució · La Baells al 77.9%"
     },
     {
       "name": "Oliana",
@@ -90,11 +90,11 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 16.6,
-      "embalseNivel": 63.2,
+      "caudal": 13.0,
+      "embalseNivel": 62.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Oliana al 63.2%"
+      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Oliana al 62.6%"
     },
     {
       "name": "Ponts",
@@ -114,11 +114,11 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 16.6,
-      "embalseNivel": 88.2,
+      "caudal": 13.0,
+      "embalseNivel": 87.8,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.2%"
+      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 87.8%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -136,11 +136,11 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 16.6,
-      "embalseNivel": 88.2,
+      "caudal": 13.0,
+      "embalseNivel": 87.8,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 16.6 m³/s — vadejar amb precaució · Rialb al 88.2%"
+      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 87.8%"
     },
     {
       "name": "Malagarriga",
@@ -158,11 +158,11 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 6.4,
-      "embalseNivel": 91.8,
+      "caudal": 5.9,
+      "embalseNivel": 91.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 6.4 m³/s — vadejar amb precaució · Sant Ponç al 91.8%"
+      "nota": "Cabal alt · 5.9 m³/s — vadejar amb precaució · Sant Ponç al 91.7%"
     },
     {
       "name": "La Guingueta d'Àneu",
@@ -189,11 +189,11 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 18.0,
+      "caudal": 12.1,
       "embalseNivel": null,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 18.0 m³/s — vadejar amb precaució"
+      "nota": "Cabal alt · 12.1 m³/s — vadejar amb precaució"
     },
     {
       "name": "Barruera",
@@ -220,11 +220,11 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 11.6,
+      "caudal": 9.2,
       "embalseNivel": null,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 11.6 m³/s — vadejar amb precaució"
+      "nota": "Cabal alt · 9.2 m³/s — vadejar amb precaució"
     },
     {
       "name": "Boadella",
@@ -242,11 +242,11 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 2.7,
+      "caudal": 2.1,
       "embalseNivel": null,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 2.7 m³/s"
+      "nota": "Condicions òptimes · 2.1 m³/s"
     }
   ]
 }
