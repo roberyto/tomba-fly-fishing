@@ -1,6 +1,6 @@
 {
-  "fecha": "4 de April de 2026",
-  "hora": "08:00",
+  "fecha": "5 de April de 2026",
+  "hora": "08:04",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 25.0,
-      "embalseNivel": 86.8,
+      "embalseNivel": 86.9,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 86.8%"
+      "nota": "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 86.9%"
     },
     {
       "name": "Alfarràs",
@@ -45,10 +45,10 @@
       "temporada": null,
       "vedaExtra": "3er_martes",
       "caudal": 9.2,
-      "embalseNivel": 86.8,
+      "embalseNivel": 86.9,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 9.2 m³/s · Canelles al 86.8%"
+      "nota": "Condicions òptimes · 9.2 m³/s · Canelles al 86.9%"
     },
     {
       "name": "Pedret",
@@ -91,10 +91,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 13.0,
-      "embalseNivel": 61.7,
+      "embalseNivel": 62.4,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Oliana al 61.7%"
+      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Oliana al 62.4%"
     },
     {
       "name": "Ponts",
@@ -115,10 +115,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 13.0,
-      "embalseNivel": 87.0,
+      "embalseNivel": 86.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 87.0%"
+      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 86.7%"
     },
     {
       "name": "Alòs de Balaguer",
@@ -137,10 +137,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 13.0,
-      "embalseNivel": 87.0,
+      "embalseNivel": 86.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 87.0%"
+      "nota": "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 86.7%"
     },
     {
       "name": "Malagarriga",
@@ -159,10 +159,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 5.9,
-      "embalseNivel": 93.3,
+      "embalseNivel": 93.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 5.9 m³/s — vadejar amb precaució · Sant Ponç al 93.3%"
+      "nota": "Cabal alt · 5.9 m³/s — vadejar amb precaució · Sant Ponç al 93.6%"
     },
     {
       "name": "La Guingueta d'Àneu",
