@@ -658,9 +658,9 @@
       </button>
     </div>
     <div class="header-meta">
-      <span id="lastUpdate">Actualitzat: 5 de April de 2026 08:04</span>
+      <span id="lastUpdate">Actualitzat: 5 de April de 2026 17:42</span>
       <div class="meta-dot"></div>
-      <span class="trend-badge">✅ 2 cotos pescables</span>
+      <span class="trend-badge">✅ 5 cotos pescables</span>
       <div class="meta-dot"></div>
       <button class="help-btn" onclick="openModal()">¿Cómo funciona?</button>
       <span style="color:var(--text3);font-size:11px">·</span>
@@ -882,83 +882,93 @@ const PERMISO_URL = "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_pub
 const COTOS = [
   {
     name: "Anglès – El Pasteral", river: "Río Ter", embalse: "Susqueda",
-    caudal: 25.0, embalseNivel: 86.9, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 25.0 m³/s — no recomanable pescar · Susqueda al 86.9%",
+    caudal: 15.4, embalseNivel: 86.8, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 86.8%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633,
-    descanso: [1], temporada: null, vedaExtra: null
+    descanso: [1], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
-    caudal: 9.2, embalseNivel: 86.9, status: "green", badge: "Pescable",
-    nota: "Condicions òptimes · 9.2 m³/s · Canelles al 86.9%",
+    caudal: 12.0, embalseNivel: 87.0, status: "green", badge: "Pescable",
+    nota: "Condicions òptimes · 12.0 m³/s · Canelles al 87.0%",
     link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
     plazas: 40, conca: "Noguera Ribagorzana", lat: 41.723, lon: 0.558,
-    descanso: [5], temporada: null, vedaExtra: "3er_martes"
+    descanso: [5], temporada: null, vedaExtra: "3er_martes",
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
-    caudal: 6.8, embalseNivel: 77.9, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 6.8 m³/s — vadejar amb precaució · La Baells al 77.9%",
+    caudal: 5.0, embalseNivel: 77.9, status: "green", badge: "Pescable",
+    nota: "Condicions òptimes · 5.0 m³/s · La Baells al 77.9%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848,
-    descanso: [4], temporada: null, vedaExtra: null
+    descanso: [4], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "Oliana", river: "Río Segre", embalse: "Oliana",
-    caudal: 13.0, embalseNivel: 62.4, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 13.0 m³/s — vadejar amb precaució · Oliana al 62.4%",
+    caudal: 18.1, embalseNivel: 63.0, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Oliana al 63.0%",
     link: "https://www.saihebro.com",
     plazas: 50, conca: "Segre", lat: 42.072, lon: 1.319,
-    descanso: [], temporada: null, vedaExtra: null
+    descanso: [], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "Ponts", river: "Río Segre", embalse: "Rialb",
-    caudal: 13.0, embalseNivel: 86.7, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 86.7%",
+    caudal: 18.1, embalseNivel: 86.6, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 86.6%",
     link: "https://www.saihebro.com",
     plazas: 30, conca: "Segre", lat: 41.916, lon: 1.196,
-    descanso: [1], temporada: null, vedaExtra: null
+    descanso: [1], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
-    caudal: 13.0, embalseNivel: 86.7, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 13.0 m³/s — vadejar amb precaució · Rialb al 86.7%",
+    caudal: 18.1, embalseNivel: 86.6, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 18.1 m³/s — vadejar amb precaució · Rialb al 86.6%",
     link: "https://www.saihebro.com",
     plazas: 19, conca: "Segre", lat: 41.883, lon: 0.9,
-    descanso: [], temporada: null, vedaExtra: null
+    descanso: [], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
-    caudal: 5.9, embalseNivel: 93.6, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 5.9 m³/s — vadejar amb precaució · Sant Ponç al 93.6%",
+    caudal: 4.6, embalseNivel: 93.6, status: "green", badge: "Pescable",
+    nota: "Condicions òptimes · 4.6 m³/s · Sant Ponç al 93.6%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74,
-    descanso: [], temporada: null, vedaExtra: null
+    descanso: [], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   },
   {
     name: "La Guingueta d'Àneu", river: "Noguera Pallaresa", embalse: "La Torrassa",
-    caudal: 12.1, embalseNivel: null, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 12.1 m³/s — vadejar amb precaució",
-    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
-    plazas: 60, conca: "Noguera Pallaresa", lat: 42.6698, lon: 1.0475,
-    descanso: [], temporada: {open: [4,5], close: [11,2]}, vedaExtra: null
-  },
-  {
-    name: "Barruera", river: "Noguera de Tor", embalse: "Barruera",
-    caudal: 9.2, embalseNivel: null, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 9.2 m³/s — vadejar amb precaució",
-    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
-    plazas: 40, conca: "Noguera Ribagorzana", lat: 42.5232, lon: 0.8288,
-    descanso: [], temporada: {open: [4,12], close: [10,12]}, vedaExtra: null
-  },
-  {
-    name: "Boadella", river: "Río Muga", embalse: "Darnius-Boadella",
     caudal: 2.1, embalseNivel: null, status: "green", badge: "Pescable",
     nota: "Condicions òptimes · 2.1 m³/s",
     link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+    plazas: 60, conca: "Noguera Pallaresa", lat: 42.6698, lon: 1.0475,
+    descanso: [], temporada: {open: [4,5], close: [11,2]}, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
+  },
+  {
+    name: "Barruera", river: "Noguera de Tor", embalse: "Barruera",
+    caudal: 12.0, embalseNivel: null, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 12.0 m³/s — vadejar amb precaució",
+    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
+    plazas: 40, conca: "Noguera Ribagorzana", lat: 42.5232, lon: 0.8288,
+    descanso: [], temporada: {open: [4,12], close: [10,12]}, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
+  },
+  {
+    name: "Boadella", river: "Río Muga", embalse: "Darnius-Boadella",
+    caudal: 1.9, embalseNivel: null, status: "green", badge: "Pescable",
+    nota: "Condicions òptimes · 1.9 m³/s",
+    link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
     plazas: 15, conca: "Muga", lat: 42.3165, lon: 2.9027,
-    descanso: [], temporada: null, vedaExtra: null
+    descanso: [], temporada: null, vedaExtra: null,
+    propera_repoblacio: null, propera_kg: null, recurrencia: null
   }
 ];
 
