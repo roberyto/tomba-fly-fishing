@@ -313,6 +313,19 @@
     line-height: 1.5;
   }
 
+  .card-repoblacio {
+    font-size: 11px;
+    color: #4ade80;
+    background: rgba(74,222,128,0.08);
+    border: 1px solid rgba(74,222,128,0.2);
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
   .chips {
     display: flex;
     gap: 5px;
@@ -989,6 +1002,21 @@ function renderGrid(){
       </div>
       <div class="status-pill ${c.status}">${c.badge}</div>
       <div class="card-nota">${c.nota}</div>
+      ${(function(){
+        if (!c.propera_repoblacio) return "";
+        const oggi = new Date();
+        const parts = c.propera_repoblacio.split("/");
+        const dataRep = new Date(parts[2], parts[1]-1, parts[0]);
+        const dies = Math.ceil((dataRep - oggi) / 86400000);
+        const quant = c.propera_kg ? c.propera_kg + " kg" : "";
+        const rec = c.recurrencia ? " · " + c.recurrencia : "";
+        let label = "";
+        if (dies < 0) label = "Repoblació recent";
+        else if (dies === 0) label = "🐟 Repoblació avui!";
+        else if (dies <= 7) label = "🐟 Repoblació en " + dies + " dia" + (dies===1?"":"s");
+        else label = "🐟 Propera: " + c.propera_repoblacio;
+        return \`<div class="card-repoblacio">\${label} \${quant}\${rec}</div>\`;
+      })()}
       <div class="chips" id="weather-${i}">
         <span class="chip">Cargando clima...</span>
       </div>

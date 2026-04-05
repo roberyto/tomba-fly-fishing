@@ -40,7 +40,7 @@ COTOS = [
         "name": "Pedret",
         "river": "Río Llobregat", "embalse_name": "La Baells",
         "saih_id": None, "embalse_id": "1186",
-        "umbral_ok": 6, "umbral_warn": 15,
+        "umbral_ok": 10, "umbral_warn": 18,
         "lat": 42.098, "lon": 1.848,
         "link": "https://aplicacions.aca.gencat.cat/aetr/vishid/",
         "plazas": 30, "conca": "Llobregat",
@@ -227,6 +227,12 @@ def main():
             caudal = dades.get("caudal")
             print(f"     Cabal: {caudal} m³/s")
 
+        # Dades de repoblació del Gist
+        dades_coto = caudals_gist.get(coto["name"], {})
+        propera_repoblacio = dades_coto.get("propera_repoblacio")
+        propera_kg         = dades_coto.get("propera_kg")
+        recurrencia        = dades_coto.get("recurrencia")
+
         embalse_nivel = None
         if coto["embalse_id"]:
             key = coto["embalse_id"]
@@ -248,6 +254,9 @@ def main():
             "status": status,
             "badge": badge,
             "nota": nota,
+            "propera_repoblacio": propera_repoblacio,
+            "propera_kg":         propera_kg,
+            "recurrencia":        recurrencia,
         })
         print(f"     Estat: {status} — {badge}")
 
@@ -283,13 +292,18 @@ def update_html(cotos, fecha, hora):
         descanso_js  = js_val(c.get("descanso", []))
         vedaExtra_js = js_val(c.get("vedaExtra"))
 
+        propera_rep_js  = js_val(c.get("propera_repoblacio"))
+        propera_kg_js   = js_val(c.get("propera_kg"))
+        recurrencia_js  = js_val(c.get("recurrencia"))
+
         item = f"""  {{
     name: "{c['name']}", river: "{c['river']}", embalse: "{c['embalse_name']}",
     caudal: {caudal_val}, embalseNivel: {embalse_val}, status: "{c['status']}", badge: "{c['badge']}",
     nota: "{nota_escaped}",
     link: "{c['link']}",
     plazas: {c['plazas']}, conca: "{c['conca']}", lat: {c['lat']}, lon: {c['lon']},
-    descanso: {descanso_js}, temporada: {temporada_js}, vedaExtra: {vedaExtra_js}
+    descanso: {descanso_js}, temporada: {temporada_js}, vedaExtra: {vedaExtra_js},
+    propera_repoblacio: {propera_rep_js}, propera_kg: {propera_kg_js}, recurrencia: {recurrencia_js}
   }}"""
         cotos_js_items.append(item)
 
