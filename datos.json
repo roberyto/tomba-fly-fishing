@@ -1,6 +1,6 @@
 {
-  "fecha": "7 de April de 2026",
-  "hora": "09:51",
+  "fecha": "8 de April de 2026",
+  "hora": "09:52",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.4,
-      "embalseNivel": 87.3,
+      "embalseNivel": 87.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 87.3%",
+      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 87.6%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -48,10 +48,10 @@
       "temporada": null,
       "vedaExtra": "3er_martes",
       "caudal": 11.2,
-      "embalseNivel": 87.1,
+      "embalseNivel": 87.0,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.2 m³/s · Canelles al 87.1%",
+      "nota": "Condicions òptimes · 11.2 m³/s · Canelles al 87.0%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -100,10 +100,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 63.9,
+      "embalseNivel": 64.2,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 63.9%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 64.2%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -127,10 +127,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 86.1,
+      "embalseNivel": 85.8,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 86.1%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 85.8%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -152,10 +152,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 86.1,
+      "embalseNivel": 85.8,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 86.1%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 85.8%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
