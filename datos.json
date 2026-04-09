@@ -1,6 +1,6 @@
 {
-  "fecha": "8 de April de 2026",
-  "hora": "09:52",
+  "fecha": "9 de April de 2026",
+  "hora": "09:59",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.4,
-      "embalseNivel": 87.6,
+      "embalseNivel": 88.0,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 87.6%",
+      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 88.0%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -100,10 +100,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 64.2,
+      "embalseNivel": 64.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 64.2%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 64.7%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -127,10 +127,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 85.8,
+      "embalseNivel": 85.9,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 85.8%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 85.9%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -152,10 +152,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 85.8,
+      "embalseNivel": 85.9,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 85.8%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 85.9%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -177,10 +177,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 4.8,
-      "embalseNivel": 94.1,
+      "embalseNivel": 94.3,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 94.1%",
+      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 94.3%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
