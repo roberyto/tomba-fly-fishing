@@ -1,6 +1,6 @@
 {
-  "fecha": "16 de April de 2026",
-  "hora": "10:44",
+  "fecha": "17 de April de 2026",
+  "hora": "10:21",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.4,
-      "embalseNivel": 90.1,
+      "embalseNivel": 90.6,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 90.1%",
+      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 90.6%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -48,10 +48,10 @@
       "temporada": null,
       "vedaExtra": "3er_martes",
       "caudal": 11.2,
-      "embalseNivel": 87.2,
+      "embalseNivel": 87.1,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.2 m³/s · Canelles al 87.2%",
+      "nota": "Condicions òptimes · 11.2 m³/s · Canelles al 87.1%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -100,10 +100,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 75.3,
+      "embalseNivel": 75.4,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 75.3%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 75.4%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -177,10 +177,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 4.8,
-      "embalseNivel": 95.8,
+      "embalseNivel": 95.9,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 95.8%",
+      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 95.9%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
