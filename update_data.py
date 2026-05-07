@@ -229,9 +229,12 @@ def main():
 
         # Dades de repoblació del Gist
         dades_coto = caudals_gist.get(coto["name"], {})
-        propera_repoblacio = dades_coto.get("propera_repoblacio")
-        propera_kg         = dades_coto.get("propera_kg")
-        recurrencia        = dades_coto.get("recurrencia")
+        aquesta_setmana_kg  = dades_coto.get("aquesta_setmana_kg")
+        propera_setmana_kg  = dades_coto.get("propera_setmana_kg")
+        propera_repoblacio  = dades_coto.get("propera_repoblacio")
+        propera_kg          = dades_coto.get("propera_kg")
+        recurrencia         = dades_coto.get("recurrencia")
+        setmanes            = dades_coto.get("setmanes", [])
 
         embalse_nivel = None
         if coto["embalse_id"]:
@@ -254,9 +257,12 @@ def main():
             "status": status,
             "badge": badge,
             "nota": nota,
-            "propera_repoblacio": propera_repoblacio,
-            "propera_kg":         propera_kg,
-            "recurrencia":        recurrencia,
+            "aquesta_setmana_kg":  aquesta_setmana_kg,
+            "propera_setmana_kg":  propera_setmana_kg,
+            "propera_repoblacio":  propera_repoblacio,
+            "propera_kg":          propera_kg,
+            "recurrencia":         recurrencia,
+            "setmanes":            setmanes,
         })
         print(f"     Estat: {status} — {badge}")
 
@@ -292,9 +298,12 @@ def update_html(cotos, fecha, hora):
         descanso_js  = js_val(c.get("descanso", []))
         vedaExtra_js = js_val(c.get("vedaExtra"))
 
-        propera_rep_js  = js_val(c.get("propera_repoblacio"))
-        propera_kg_js   = js_val(c.get("propera_kg"))
-        recurrencia_js  = js_val(c.get("recurrencia"))
+        propera_rep_js       = js_val(c.get("propera_repoblacio"))
+        propera_kg_js        = js_val(c.get("propera_kg"))
+        recurrencia_js       = js_val(c.get("recurrencia"))
+        aquesta_setmana_js   = js_val(c.get("aquesta_setmana_kg"))
+        propera_setmana_js   = js_val(c.get("propera_setmana_kg"))
+        setmanes_js          = js_val(c.get("setmanes", []))
 
         item = f"""  {{
     name: "{c['name']}", river: "{c['river']}", embalse: "{c['embalse_name']}",
@@ -303,7 +312,9 @@ def update_html(cotos, fecha, hora):
     link: "{c['link']}",
     plazas: {c['plazas']}, conca: "{c['conca']}", lat: {c['lat']}, lon: {c['lon']},
     descanso: {descanso_js}, temporada: {temporada_js}, vedaExtra: {vedaExtra_js},
-    propera_repoblacio: {propera_rep_js}, propera_kg: {propera_kg_js}, recurrencia: {recurrencia_js}
+    aquesta_setmana_kg: {aquesta_setmana_js}, propera_setmana_kg: {propera_setmana_js},
+    propera_repoblacio: {propera_rep_js}, propera_kg: {propera_kg_js}, recurrencia: {recurrencia_js},
+    setmanes: {setmanes_js}
   }}"""
         cotos_js_items.append(item)
 
