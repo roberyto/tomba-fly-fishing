@@ -1,6 +1,6 @@
 {
   "fecha": "7 de May de 2026",
-  "hora": "08:31",
+  "hora": "17:28",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -20,14 +20,28 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 15.4,
-      "embalseNivel": 90.7,
+      "caudal": 13.9,
+      "embalseNivel": 90.5,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 90.7%",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "nota": "Cabal alt · 13.9 m³/s — vadejar amb precaució · Susqueda al 90.5%",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": null,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "quincenal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Alfarràs",
@@ -47,14 +61,38 @@
       ],
       "temporada": null,
       "vedaExtra": "3er_martes",
-      "caudal": 11.2,
-      "embalseNivel": 84.2,
-      "status": "green",
-      "badge": "Pescable",
-      "nota": "Condicions òptimes · 11.2 m³/s · Canelles al 84.2%",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "caudal": 26.8,
+      "embalseNivel": 84.3,
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 26.8 m³/s — no recomanable pescar · Canelles al 84.3%",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": 100,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "semanal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "11/05/2026",
+          "17/05/2026",
+          100
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Pedret",
@@ -74,14 +112,33 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 5.0,
+      "caudal": 8.7,
       "embalseNivel": 77.0,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 5.0 m³/s · La Baells al 77.0%",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "nota": "Condicions òptimes · 8.7 m³/s · La Baells al 77.0%",
+      "aquesta_setmana_kg": 50,
+      "propera_setmana_kg": null,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "quincenal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          50
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Oliana",
@@ -99,14 +156,23 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 15.9,
+      "caudal": 38.3,
       "embalseNivel": 91.3,
-      "status": "yellow",
-      "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 91.3%",
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 38.3 m³/s — no recomanable pescar · Oliana al 91.3%",
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": 100,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": null
+      "recurrencia": null,
+      "setmanes": [
+        [
+          "11/05/2026",
+          "17/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Ponts",
@@ -126,14 +192,28 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 15.9,
-      "embalseNivel": 96.3,
-      "status": "yellow",
-      "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 96.3%",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "caudal": 38.3,
+      "embalseNivel": 96.2,
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 38.3 m³/s — no recomanable pescar · Rialb al 96.2%",
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": 100,
+      "propera_repoblacio": "25/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "quincenal",
+      "setmanes": [
+        [
+          "11/05/2026",
+          "17/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Alòs de Balaguer",
@@ -151,14 +231,33 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 15.9,
-      "embalseNivel": 96.3,
-      "status": "yellow",
-      "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Rialb al 96.3%",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "caudal": 38.3,
+      "embalseNivel": 96.2,
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 38.3 m³/s — no recomanable pescar · Rialb al 96.2%",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": null,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "quincenal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Malagarriga",
@@ -176,14 +275,28 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 4.8,
+      "caudal": 4.0,
       "embalseNivel": 95.0,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 95.0%",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "nota": "Condicions òptimes · 4.0 m³/s · Sant Ponç al 95.0%",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": null,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "quincenal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "La Guingueta d'Àneu",
@@ -210,14 +323,38 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 2.0,
+      "caudal": 24.9,
       "embalseNivel": null,
-      "status": "green",
-      "badge": "Pescable",
-      "nota": "Condicions òptimes · 2.0 m³/s",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 24.9 m³/s — no recomanable pescar",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": 100,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "semanal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "11/05/2026",
+          "17/05/2026",
+          100
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Barruera",
@@ -244,14 +381,38 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 11.2,
+      "caudal": 26.8,
       "embalseNivel": null,
-      "status": "yellow",
-      "badge": "Condicions límit",
-      "nota": "Cabal alt · 11.2 m³/s — vadejar amb precaució",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "status": "red",
+      "badge": "No pescable",
+      "nota": "Cabal excessiu · 26.8 m³/s — no recomanable pescar",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": 100,
+      "propera_repoblacio": "18/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "semanal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "11/05/2026",
+          "17/05/2026",
+          100
+        ],
+        [
+          "18/05/2026",
+          "24/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     },
     {
       "name": "Boadella",
@@ -269,14 +430,33 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 1.9,
+      "caudal": 0.2,
       "embalseNivel": null,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 1.9 m³/s",
-      "propera_repoblacio": null,
-      "propera_kg": null,
-      "recurrencia": null
+      "nota": "Condicions òptimes · 0.2 m³/s",
+      "aquesta_setmana_kg": 100,
+      "propera_setmana_kg": 100,
+      "propera_repoblacio": "25/05/2026",
+      "propera_kg": 100,
+      "recurrencia": "quincenal",
+      "setmanes": [
+        [
+          "04/05/2026",
+          "10/05/2026",
+          100
+        ],
+        [
+          "11/05/2026",
+          "17/05/2026",
+          100
+        ],
+        [
+          "25/05/2026",
+          "31/05/2026",
+          100
+        ]
+      ]
     }
   ]
 }
