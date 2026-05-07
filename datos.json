@@ -1,6 +1,6 @@
 {
-  "fecha": "6 de May de 2026",
-  "hora": "08:25",
+  "fecha": "7 de May de 2026",
+  "hora": "08:31",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -21,10 +21,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.4,
-      "embalseNivel": 91.2,
+      "embalseNivel": 90.7,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 91.2%",
+      "nota": "Cabal alt · 15.4 m³/s — vadejar amb precaució · Susqueda al 90.7%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -100,10 +100,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 15.9,
-      "embalseNivel": 93.4,
+      "embalseNivel": 91.3,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 93.4%",
+      "nota": "Cabal alt · 15.9 m³/s — vadejar amb precaució · Oliana al 91.3%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
@@ -177,10 +177,10 @@
       "temporada": null,
       "vedaExtra": null,
       "caudal": 4.8,
-      "embalseNivel": 95.3,
+      "embalseNivel": 95.0,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 95.3%",
+      "nota": "Condicions òptimes · 4.8 m³/s · Sant Ponç al 95.0%",
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null
