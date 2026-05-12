@@ -671,9 +671,9 @@
       </button>
     </div>
     <div class="header-meta">
-      <span id="lastUpdate">Actualitzat: 11 de May de 2026 09:36</span>
+      <span id="lastUpdate">Actualitzat: 12 de May de 2026 08:38</span>
       <div class="meta-dot"></div>
-      <span class="trend-badge">✅ 3 cotos pescables</span>
+      <span class="trend-badge">✅ 1 coto pescable</span>
       <div class="meta-dot"></div>
       <button class="help-btn" onclick="openModal()">¿Cómo funciona?</button>
       <span style="color:var(--text3);font-size:11px">·</span>
@@ -895,101 +895,101 @@ const PERMISO_URL = "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_pub
 const COTOS = [
   {
     name: "Anglès – El Pasteral", river: "Río Ter", embalse: "Susqueda",
-    caudal: 13.9, embalseNivel: 91.6, status: "yellow", badge: "Condicions límit",
-    nota: "Cabal alt · 13.9 m³/s — vadejar amb precaució · Susqueda al 91.6%",
+    caudal: 14.3, embalseNivel: 91.9, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 14.3 m³/s — vadejar amb precaució · Susqueda al 91.9%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 16, conca: "Ter", lat: 41.95, lon: 2.633,
     descanso: [1], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: 100, propera_setmana_kg: null,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "quincenal",
+    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    propera_repoblacio: null, propera_kg: null, recurrencia: "quincenal",
     setmanes: [['04/05/2026', '10/05/2026', 100],['18/05/2026', '24/05/2026', 100]]
   },
   {
     name: "Alfarràs", river: "Río Noguera Ribagorzana", embalse: "Canelles",
-    caudal: 25.5, embalseNivel: 84.5, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 25.5 m³/s — no recomanable pescar · Canelles al 84.5%",
+    caudal: 20.5, embalseNivel: 84.7, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 20.5 m³/s — vadejar amb precaució · Canelles al 84.7%",
     link: "https://www.saihebro.com/tiempo-real/mapa-aforos-H13-nogueras",
     plazas: 40, conca: "Noguera Ribagorzana", lat: 41.723, lon: 0.558,
     descanso: [5], temporada: null, vedaExtra: "3er_martes",
     aquesta_setmana_kg: 100, propera_setmana_kg: 100,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "semanal",
+    propera_repoblacio: "25/05/2026", propera_kg: 100, recurrencia: "semanal",
     setmanes: [['04/05/2026', '10/05/2026', 100],['11/05/2026', '17/05/2026', 100],['18/05/2026', '24/05/2026', 100],['25/05/2026', '31/05/2026', 100]]
   },
   {
     name: "Pedret", river: "Río Llobregat", embalse: "La Baells",
-    caudal: 9.1, embalseNivel: 77.0, status: "green", badge: "Pescable",
-    nota: "Condicions òptimes · 9.1 m³/s · La Baells al 77.0%",
+    caudal: 12.9, embalseNivel: 77.1, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 12.9 m³/s — vadejar amb precaució · La Baells al 77.1%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 30, conca: "Llobregat", lat: 42.098, lon: 1.848,
     descanso: [4], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: 50, propera_setmana_kg: null,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "quincenal",
+    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    propera_repoblacio: "25/05/2026", propera_kg: 100, recurrencia: "quincenal",
     setmanes: [['04/05/2026', '10/05/2026', 50],['18/05/2026', '24/05/2026', 100],['25/05/2026', '31/05/2026', 100]]
   },
   {
     name: "Oliana", river: "Río Segre", embalse: "Oliana",
-    caudal: 39.6, embalseNivel: 94.7, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 39.6 m³/s — no recomanable pescar · Oliana al 94.7%",
+    caudal: 30.4, embalseNivel: 95.4, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 30.4 m³/s — no recomanable pescar · Oliana al 95.4%",
     link: "https://www.saihebro.com",
     plazas: 50, conca: "Segre", lat: 42.072, lon: 1.319,
     descanso: [], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    aquesta_setmana_kg: 100, propera_setmana_kg: null,
     propera_repoblacio: null, propera_kg: null, recurrencia: null,
     setmanes: [['11/05/2026', '17/05/2026', 100]]
   },
   {
     name: "Ponts", river: "Río Segre", embalse: "Rialb",
-    caudal: 39.6, embalseNivel: 96.6, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 39.6 m³/s — no recomanable pescar · Rialb al 96.6%",
+    caudal: 30.4, embalseNivel: 96.7, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 30.4 m³/s — no recomanable pescar · Rialb al 96.7%",
     link: "https://www.saihebro.com",
     plazas: 30, conca: "Segre", lat: 41.916, lon: 1.196,
     descanso: [1], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    aquesta_setmana_kg: 100, propera_setmana_kg: null,
     propera_repoblacio: "25/05/2026", propera_kg: 100, recurrencia: "quincenal",
     setmanes: [['11/05/2026', '17/05/2026', 100],['25/05/2026', '31/05/2026', 100]]
   },
   {
     name: "Alòs de Balaguer", river: "Río Segre", embalse: "Rialb",
-    caudal: 39.6, embalseNivel: 96.6, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 39.6 m³/s — no recomanable pescar · Rialb al 96.6%",
+    caudal: 30.4, embalseNivel: 96.7, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 30.4 m³/s — no recomanable pescar · Rialb al 96.7%",
     link: "https://www.saihebro.com",
     plazas: 19, conca: "Segre", lat: 41.883, lon: 0.9,
     descanso: [], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: 100, propera_setmana_kg: null,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "quincenal",
+    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    propera_repoblacio: "25/05/2026", propera_kg: 100, recurrencia: "quincenal",
     setmanes: [['04/05/2026', '10/05/2026', 100],['18/05/2026', '24/05/2026', 100],['25/05/2026', '31/05/2026', 100]]
   },
   {
     name: "Malagarriga", river: "Río Cardener", embalse: "Sant Ponç",
-    caudal: 4.0, embalseNivel: 95.4, status: "green", badge: "Pescable",
-    nota: "Condicions òptimes · 4.0 m³/s · Sant Ponç al 95.4%",
+    caudal: 5.5, embalseNivel: 95.4, status: "yellow", badge: "Condicions límit",
+    nota: "Cabal alt · 5.5 m³/s — vadejar amb precaució · Sant Ponç al 95.4%",
     link: "https://aplicacions.aca.gencat.cat/aetr/vishid/",
     plazas: 25, conca: "Llobregat", lat: 41.838, lon: 1.74,
     descanso: [], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: 100, propera_setmana_kg: null,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "quincenal",
+    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    propera_repoblacio: null, propera_kg: null, recurrencia: "quincenal",
     setmanes: [['04/05/2026', '10/05/2026', 100],['18/05/2026', '24/05/2026', 100]]
   },
   {
     name: "La Guingueta d'Àneu", river: "Noguera Pallaresa", embalse: "La Torrassa",
-    caudal: 24.9, embalseNivel: null, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 24.9 m³/s — no recomanable pescar",
+    caudal: 30.1, embalseNivel: null, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 30.1 m³/s — no recomanable pescar",
     link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
     plazas: 60, conca: "Noguera Pallaresa", lat: 42.6698, lon: 1.0475,
     descanso: [], temporada: {open: [4,5], close: [11,2]}, vedaExtra: null,
     aquesta_setmana_kg: 100, propera_setmana_kg: 100,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "semanal",
+    propera_repoblacio: "25/05/2026", propera_kg: 100, recurrencia: "semanal",
     setmanes: [['04/05/2026', '10/05/2026', 100],['11/05/2026', '17/05/2026', 100],['18/05/2026', '24/05/2026', 100],['25/05/2026', '31/05/2026', 100]]
   },
   {
     name: "Barruera", river: "Noguera de Tor", embalse: "Barruera",
-    caudal: 25.5, embalseNivel: null, status: "red", badge: "No pescable",
-    nota: "Cabal excessiu · 25.5 m³/s — no recomanable pescar",
+    caudal: 20.5, embalseNivel: null, status: "red", badge: "No pescable",
+    nota: "Cabal excessiu · 20.5 m³/s — no recomanable pescar",
     link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
     plazas: 40, conca: "Noguera Ribagorzana", lat: 42.5232, lon: 0.8288,
     descanso: [], temporada: {open: [4,12], close: [10,12]}, vedaExtra: null,
     aquesta_setmana_kg: 100, propera_setmana_kg: 100,
-    propera_repoblacio: "18/05/2026", propera_kg: 100, recurrencia: "semanal",
+    propera_repoblacio: "25/05/2026", propera_kg: 100, recurrencia: "semanal",
     setmanes: [['04/05/2026', '10/05/2026', 100],['11/05/2026', '17/05/2026', 100],['18/05/2026', '24/05/2026', 100],['25/05/2026', '31/05/2026', 100]]
   },
   {
@@ -999,7 +999,7 @@ const COTOS = [
     link: "https://aplicacions.agricultura.gencat.cat/mediamb_sgll_public/AppJava/zpc/zpcEmissio.do?reqCode=prepareLocale",
     plazas: 15, conca: "Muga", lat: 42.3165, lon: 2.9027,
     descanso: [], temporada: null, vedaExtra: null,
-    aquesta_setmana_kg: null, propera_setmana_kg: 100,
+    aquesta_setmana_kg: 100, propera_setmana_kg: null,
     propera_repoblacio: null, propera_kg: null, recurrencia: null,
     setmanes: [['11/05/2026', '17/05/2026', 100]]
   }
