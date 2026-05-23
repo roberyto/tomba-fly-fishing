@@ -1,6 +1,6 @@
 {
-  "fecha": "22 de May de 2026",
-  "hora": "09:20",
+  "fecha": "23 de May de 2026",
+  "hora": "08:17",
   "cotos": [
     {
       "name": "Anglès – El Pasteral",
@@ -20,28 +20,17 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 12.8,
-      "embalseNivel": 94.6,
+      "caudal": 19.0,
+      "embalseNivel": 94.4,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 12.8 m³/s — vadejar amb precaució · Susqueda al 94.6%",
-      "aquesta_setmana_kg": 100,
+      "nota": "Cabal alt · 19.0 m³/s — vadejar amb precaució · Susqueda al 94.4%",
+      "aquesta_setmana_kg": null,
       "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "quincenal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          100
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Alfarràs",
@@ -61,38 +50,17 @@
       ],
       "temporada": null,
       "vedaExtra": "3er_martes",
-      "caudal": 19.4,
-      "embalseNivel": 84.4,
+      "caudal": 20.5,
+      "embalseNivel": 84.3,
       "status": "yellow",
       "badge": "Condicions límit",
-      "nota": "Cabal alt · 19.4 m³/s — vadejar amb precaució · Canelles al 84.4%",
-      "aquesta_setmana_kg": 100,
-      "propera_setmana_kg": 100,
+      "nota": "Cabal alt · 20.5 m³/s — vadejar amb precaució · Canelles al 84.3%",
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "semanal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          100
-        ],
-        [
-          "11/05/2026",
-          "17/05/2026",
-          100
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ],
-        [
-          "25/05/2026",
-          "31/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Pedret",
@@ -117,28 +85,12 @@
       "status": "green",
       "badge": "Pescable",
       "nota": "Condicions òptimes · 8.8 m³/s · La Baells al 76.8%",
-      "aquesta_setmana_kg": 100,
-      "propera_setmana_kg": 100,
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "quincenal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          50
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ],
-        [
-          "25/05/2026",
-          "31/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Oliana",
@@ -156,23 +108,17 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 26.1,
-      "embalseNivel": 93.7,
+      "caudal": 27.2,
+      "embalseNivel": 94.0,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 26.1 m³/s — no recomanable pescar · Oliana al 93.7%",
+      "nota": "Cabal excessiu · 27.2 m³/s — no recomanable pescar · Oliana al 94.0%",
       "aquesta_setmana_kg": null,
       "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null,
-      "setmanes": [
-        [
-          "11/05/2026",
-          "17/05/2026",
-          100
-        ]
-      ]
+      "setmanes": []
     },
     {
       "name": "Ponts",
@@ -192,28 +138,17 @@
       ],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 26.1,
-      "embalseNivel": 98.5,
+      "caudal": 27.2,
+      "embalseNivel": 98.8,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 26.1 m³/s — no recomanable pescar · Rialb al 98.5%",
+      "nota": "Cabal excessiu · 27.2 m³/s — no recomanable pescar · Rialb al 98.8%",
       "aquesta_setmana_kg": null,
-      "propera_setmana_kg": 100,
+      "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "quincenal",
-      "setmanes": [
-        [
-          "11/05/2026",
-          "17/05/2026",
-          100
-        ],
-        [
-          "25/05/2026",
-          "31/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Alòs de Balaguer",
@@ -231,33 +166,17 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 26.1,
-      "embalseNivel": 98.5,
+      "caudal": 27.2,
+      "embalseNivel": 98.8,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 26.1 m³/s — no recomanable pescar · Rialb al 98.5%",
-      "aquesta_setmana_kg": 100,
-      "propera_setmana_kg": 100,
+      "nota": "Cabal excessiu · 27.2 m³/s — no recomanable pescar · Rialb al 98.8%",
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "quincenal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          100
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ],
-        [
-          "25/05/2026",
-          "31/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Malagarriga",
@@ -275,28 +194,17 @@
       "descanso": [],
       "temporada": null,
       "vedaExtra": null,
-      "caudal": 3.6,
-      "embalseNivel": 95.2,
+      "caudal": 3.1,
+      "embalseNivel": 95.1,
       "status": "green",
       "badge": "Pescable",
-      "nota": "Condicions òptimes · 3.6 m³/s · Sant Ponç al 95.2%",
-      "aquesta_setmana_kg": 100,
+      "nota": "Condicions òptimes · 3.1 m³/s · Sant Ponç al 95.1%",
+      "aquesta_setmana_kg": null,
       "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "quincenal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          100
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "La Guingueta d'Àneu",
@@ -323,38 +231,17 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 22.0,
+      "caudal": 33.2,
       "embalseNivel": null,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 22.0 m³/s — no recomanable pescar",
-      "aquesta_setmana_kg": 100,
-      "propera_setmana_kg": 100,
+      "nota": "Cabal excessiu · 33.2 m³/s — no recomanable pescar",
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "semanal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          100
-        ],
-        [
-          "11/05/2026",
-          "17/05/2026",
-          100
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ],
-        [
-          "25/05/2026",
-          "31/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Barruera",
@@ -381,38 +268,17 @@
         ]
       },
       "vedaExtra": null,
-      "caudal": 19.4,
+      "caudal": 20.5,
       "embalseNivel": null,
       "status": "red",
       "badge": "No pescable",
-      "nota": "Cabal excessiu · 19.4 m³/s — no recomanable pescar",
-      "aquesta_setmana_kg": 100,
-      "propera_setmana_kg": 100,
+      "nota": "Cabal excessiu · 20.5 m³/s — no recomanable pescar",
+      "aquesta_setmana_kg": null,
+      "propera_setmana_kg": null,
       "propera_repoblacio": null,
       "propera_kg": null,
-      "recurrencia": "semanal",
-      "setmanes": [
-        [
-          "04/05/2026",
-          "10/05/2026",
-          100
-        ],
-        [
-          "11/05/2026",
-          "17/05/2026",
-          100
-        ],
-        [
-          "18/05/2026",
-          "24/05/2026",
-          100
-        ],
-        [
-          "25/05/2026",
-          "31/05/2026",
-          100
-        ]
-      ]
+      "recurrencia": null,
+      "setmanes": []
     },
     {
       "name": "Boadella",
@@ -440,13 +306,7 @@
       "propera_repoblacio": null,
       "propera_kg": null,
       "recurrencia": null,
-      "setmanes": [
-        [
-          "11/05/2026",
-          "17/05/2026",
-          100
-        ]
-      ]
+      "setmanes": []
     }
   ]
 }
